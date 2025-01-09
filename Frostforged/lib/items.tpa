@@ -928,7 +928,7 @@ STATISTICS:
 Charge abilities:
 – Thieving Skills: +25%
 – Keen: +10% bonus to Critical Hit Chance
-– Critical hits inflicted by this weapon deal 1d12 additional slashing damage
+– Massive Criticals: Critical hits inflicted by this weapon deal 1d12 additional slashing damage
 – Luck: +1
 
 THAC0: +4
@@ -1018,7 +1018,7 @@ STATISTICS:
 Charge abilities:
 – Thieving Skills: +15%
 – Keen: +5% bonus to Critical Hit Chance
-– Critical hits inflicted by this weapon deal 1d12 additional slashing damage
+– Massive Criticals: Critical hits inflicted by this weapon deal 1d12 additional slashing damage
 – Luck: -2
 
 THAC0: +2
@@ -1117,7 +1117,7 @@ SAY DESC ~This broad sword used to belong to Erevain Blacksheaf, a wandering elf
 STATISTICS:
 
 Combat Abilities:
-– Critical hits inflicted by this weapon deal 1d10 additional slashing damage
+– Massive Criticals: Critical hits inflicted by this weapon deal 1d10 additional slashing damage
 
 Equipped abilities:
 – Save vs. Enchantments: +4
@@ -1452,6 +1452,256 @@ Requires:
  15 Strength
 
 Weight: 3~
+
+COPY_EXISTING ~U1HAM2A.ITM~ ~OVERRIDE~
+SAY DESC ~Like others of its type, this war hammer is made entirely of steel, with a bone-crushing hammer mounted upon an eighteen-inch shaft. It has also been bestowed with a small number of magical properties, however, making it more effective in combat. 
+
+STATISTICS:
+
+Equipped abilities:
+– Turn Undead Level: +1
+
+THAC0: +1
+Damage: 1d4+2 (crushing)
+Speed Factor: 3
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
+
+Weight: 6~
+
+COPY_EXISTING ~U1HAM3A.ITM~ ~OVERRIDE~
+   LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Corrosion~) END
+SAY DESC ~Like others of its type, this war hammer is made entirely of steel, with a bone-crushing hammer mounted upon an eighteen-inch shaft. It has also been bestowed with a small number of magical properties, however, making it more effective in combat. 
+
+STATISTICS:
+
+Combat abilities:
+– 25% chance to deal 2 additional acid damage per round for the next 3 rounds
+
+THAC0: +2
+Damage: 1d4+3, 1 acid
+Damage type: crushing
+Speed Factor: 3
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
+
+Weight: 6~
+
+COPY_EXISTING ~U1HAM3B.ITM~ ~OVERRIDE~
+SAY DESC ~Like others of its type, this war hammer is made entirely of steel, with a bone-crushing hammer mounted upon an eighteen-inch shaft. It has also been bestowed with a small number of magical properties, however, making it more effective in combat. 
+
+STATISTICS:
+
+Combat abilities:
+– 40% chance to stun the target for 1 round on a failed Save vs. Spells at -1
+
+THAC0: +2
+Damage: 1d4+3, 2 electrical
+Damage type: crushing
+Speed Factor: 3
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
+
+Weight: 6~
+
+COPY_EXISTING ~U1HAM4A.ITM~ ~OVERRIDE~
+SAY DESC ~Like others of its type, this war hammer is made entirely of steel, with a bone-crushing hammer mounted upon an eighteen-inch shaft. It has also been bestowed with a small number of magical properties, however, making it more effective in combat. 
+
+STATISTICS:
+
+Combat abilities:
+– Maximum Hit Points: +10
+– Restore one hit point to the wielder on hit
+
+THAC0: +3
+Damage: 1d4+4 (crushing)
+Speed Factor: 3
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
+
+Weight: 6~
+
+COPY_EXISTING ~U1HAM4B.ITM~ ~OVERRIDE~
+SAY DESC ~Like others of its type, this war hammer is made entirely of steel, with a bone-crushing hammer mounted upon an eighteen-inch shaft. It has also been bestowed with a small number of magical properties, however, making it more effective in combat. 
+
+STATISTICS:
+
+Equipped abilities:
+– Turn Undead Level: +3
+
+THAC0: +3
+Damage: 1d4+4 (crushing)
+Speed Factor: 3
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
+
+Weight: 6~
+
+COPY_EXISTING ~U1HAM5A.ITM~ ~OVERRIDE~
+SAY DESC ~Like others of its type, this war hammer is made entirely of steel, with a bone-crushing hammer mounted upon an eighteen-inch shaft. It has also been bestowed with a small number of magical properties, however, making it more effective in combat. 
+
+STATISTICS:
+
+Combat abilities:
+– 30% chance target is phased (takes 3 damage per second and reduces their damage by 20%) for 10 seconds
+
+THAC0: +3
+Damage: 1d4+4 (crushing)
+Speed Factor: 3
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
+
+Weight: 6~
+
+COPY_EXISTING ~U1HAM5B.ITM~ ~OVERRIDE~
+SAY DESC ~Like others of its type, this war hammer is made entirely of steel, with a bone-crushing hammer mounted upon an eighteen-inch shaft. It has also been bestowed with a small number of magical properties, however, making it more effective in combat. 
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +4
+– Saving Throws: +4
+– Physical Resistance: +10%
+– Protects from critical hits
+
+THAC0: +4
+Damage: 1d4+5 (crushing)
+Speed Factor: 3
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
+
+Weight: 6~
+
+COPY_EXISTING ~U1HAX1A.ITM~ ~OVERRIDE~
+SAY DESC ~The most common version of the battle axe is a stout pole about four feet in length with a single-edged, trumpet-shaped blade mounted on one end. Battle axes are also called broad axes.
+
+STATISTICS:
+
+Combat abilities:
+– Keen: +5% bonus to Critical Hit Chance
+– Massive Criticals: Critical hits inflicted by this weapon deal an additional 1d8 slashing damage
+
+THAC0: +2
+Damage: 1d8 (slashing)
+Speed Factor: 7
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 7~
+
+COPY_EXISTING ~U1HAX2A.ITM~ ~OVERRIDE~
+SAY DESC ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation, and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+
+STATISTICS:
+
+Combat abilities:
+– 40% chance to stun the target for 1 round on a failed Save vs. Spells at -1
+
+THAC0: +2
+Damage: 1d8+2, 2 electrical
+Damage type: slashing
+Speed Factor: 7
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 7~
+
+COPY_EXISTING ~U1HAX3A.ITM~ ~OVERRIDE~
+SAY DESC ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation, and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+
+STATISTICS:
+
+Combat abilities:
+– 80% chance to poison the target on hit, dealing 1 damage per round and reducing the target's Strength and Constitution by 3 points for 2 turns (non-cumulative)
+
+THAC0: +2
+Damage: 1d8+2, 1 poison
+Damage type: slashing
+Speed Factor: 7
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 7~
+
+COPY_EXISTING ~U1HAX3B.ITM~ ~OVERRIDE~
+SAY DESC ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation, and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2
+– Saving Throws: +2
+– Physical Resistance: +7%
+
+THAC0: +2
+Damage: 1d8+2 (slashing)
+Speed Factor: 7
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 7~
+
+COPY_EXISTING ~U1HAX4A.ITM~ ~OVERRIDE~
+SAY DESC ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation, and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+
+STATISTICS:
+
+Combat abilities:
+– Each hit reduces the target's damage by a cumulative 3% for 4 rounds
+
+THAC0: +3
+Damage: 1d8+3 (slashing)
+Speed Factor: 7
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 7~
+
+COPY_EXISTING ~U1HAX4B.ITM~ ~OVERRIDE~
+SAY DESC ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation, and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+
+STATISTICS:
+
+Equipped abilities:
+– Strength: +3
+
+Combat abilities:
+– Returns to the wielder's hand when thrown
+– Each hit has a chance (40% melee, 20% ranged) to stun the target for 2 rounds on a failed Save vs. Death at -3
+
+THAC0: +3
+Damage: 1d8+3 (slashing)
+Speed Factor: 4
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 7~
 
 // Writes a new item type into the itemtype.2da and returns the reference value.
 LAF ADD_ITEMTYPE_IN_2DA
