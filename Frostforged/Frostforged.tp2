@@ -1,0 +1,12 @@
+BACKUP ~weidu_external/backup/TheArtisan/Frostforged~
+AUTHOR ~The Artisan (artisans-corner.com)~
+AUTO_TRA ~%MOD_FOLDER%/translations/%s~
+ALWAYS
+  INCLUDE ~%MOD_FOLDER%/lib/2daHandling.tph~
+  INCLUDE ~%MOD_FOLDER%/lib/functions.tph~
+END
+LANGUAGE ~English~
+         ~English~
+
+BEGIN ~Frostforged: Item Rebalance Mod for IWD:EE~
+INCLUDE ~%MOD_FOLDER%/lib/items.tpa~
