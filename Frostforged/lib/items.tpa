@@ -1703,6 +1703,27 @@ Requires:
 
 Weight: 7~
 
+COPY_EXISTING ~U2HAM2A.ITM~ ~OVERRIDE~
+SAY DESC ~Like others of its type, this war hammer is made entirely of steel, with a bone-crushing hammer mounted upon an 18-in. shaft. 
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: -1 penalty
+
+Combat abilities:
+– Total attacks per round with this weapon are halved
+
+THAC0: -2
+Damage: 2d8+6 (crushing)
+Speed Factor: 4
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 18 Strength
+
+Weight: 15~
+
 // Writes a new item type into the itemtype.2da and returns the reference value.
 LAF ADD_ITEMTYPE_IN_2DA
 		INT_VAR
