@@ -1,0 +1,95 @@
+IF
+  HasItem("C0FF-MI1",Player1)
+  TriggerOverride(Player1,Global("C0FF-MI1","LOCALS",0))
+THEN
+  RESPONSE #100
+   ApplySpellRES("C0FF-MI1",Player1)
+END
+
+IF
+  HasItem("C0FF-MI1",Player2)
+  TriggerOverride(Player2,Global("C0FF-MI1","LOCALS",0))
+THEN
+  RESPONSE #100
+   ApplySpellRES("C0FF-MI1",Player2)
+END
+
+IF
+  HasItem("C0FF-MI1",Player3)
+  TriggerOverride(Player3,Global("C0FF-MI1","LOCALS",0))
+THEN
+  RESPONSE #100
+   ApplySpellRES("C0FF-MI1",Player3)
+END
+
+IF
+  HasItem("C0FF-MI1",Player4)
+  TriggerOverride(Player4,Global("C0FF-MI1","LOCALS",0))
+THEN
+  RESPONSE #100
+   ApplySpellRES("C0FF-MI1",Player4)
+END
+
+IF
+  HasItem("C0FF-MI1",Player5)
+  TriggerOverride(Player5,Global("C0FF-MI1","LOCALS",0))
+THEN
+  RESPONSE #100
+   ApplySpellRES("C0FF-MI1",Player5)
+END
+
+IF
+  HasItem("C0FF-MI1",Player6)
+  TriggerOverride(Player6,Global("C0FF-MI1","LOCALS",0))
+THEN
+  RESPONSE #100
+   ApplySpellRES("C0FF-MI1",Player6)
+END
+
+IF
+  !HasItem("C0FF-MI1",Player1)
+  TriggerOverride(Player1,Global("C0FF-MI1","LOCALS",1))
+THEN
+  RESPONSE #100
+   ApplySpellRES("C0FF-MI2",Player1)
+END
+
+IF
+  !HasItem("C0FF-MI1",Player2)
+  TriggerOverride(Player2,Global("C0FF-MI1","LOCALS",1))
+THEN
+  RESPONSE #100
+   ApplySpellRES("C0FF-MI2",Player2)
+END
+
+IF
+  !HasItem("C0FF-MI1",Player3)
+  TriggerOverride(Player3,Global("C0FF-MI1","LOCALS",1))
+THEN
+  RESPONSE #100
+   ApplySpellRES("C0FF-MI2",Player3)
+END
+
+IF
+  !HasItem("C0FF-MI1",Player4)
+  TriggerOverride(Player4,Global("C0FF-MI1","LOCALS",1))
+THEN
+  RESPONSE #100
+   ApplySpellRES("C0FF-MI2",Player4)
+END
+
+IF
+  !HasItem("C0FF-MI1",Player5)
+  TriggerOverride(Player5,Global("C0FF-MI1","LOCALS",1))
+THEN
+  RESPONSE #100
+   ApplySpellRES("C0FF-MI2",Player5)
+END
+
+IF
+  !HasItem("C0FF-MI1",Player6)
+  TriggerOverride(Player6,Global("C0FF-MI1","LOCALS",1))
+THEN
+  RESPONSE #100
+   ApplySpellRES("C0FF-MI2",Player6)
+END

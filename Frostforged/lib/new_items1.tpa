@@ -1,5 +1,7 @@
 COPY ~%MOD_FOLDER%/itm/new~ ~override~
 
+EXTEND_TOP ~baldur.bcs~ ~%MOD_FOLDER%/scripts/items-new.baf~
+
 COPY_EXISTING ~C0FF-DT1.itm~ ~override~
 SAY NAME2 ~Fury of the Four Elements +3~
 SAY DESC ~This dart was crafted by the vremyonni, the male wizards of Rashemen. Rashemen is a land full of ancient and wise spirits bearing powerful magicks, four of which that embody the power of the seasons bestowed their power upon this magical dart, giving it an equal amount of power from four different elemental forces. The magic that empowers the dart also seems to be alive, allowing it to bond with its wielder and return to them when thrown, drawing some power from the struck target along with it.
@@ -24,4 +26,23 @@ COPY_EXISTING ~AR4005.are~ ~override~
         container_to_add_to = 15
       STR_VAR
         item_to_add = ~C0FF-DT1~
+      END
+
+COPY_EXISTING ~C0FF-MI1.itm~ ~override~
+SAY NAME2 ~Ingenuity~
+SAY DESC ~This initially appears to be simply a perfectly-cut gem, a precious stone of great material value... but upon looking deeper, focusing upon the various colors and reflections of light across the overlapping facets of its surface, you begin to understand it as being something more... as though what you are holding within your hand is thought given form, a reflection of the skill, knowledge and patience required to overcome all of the Luremaster's trials. Whether your enhanced clarity is an effect of holding the stone close or part of your own growth is uncertain, though as you meditatively roll it across your palm, you feel as though you can see though the fog of doubt and uncertainty behind every question, decision or interaction.
+
+STATISTICS:
+
+Special:
+– While in the inventory, the holder gains a +3 bonus to Intelligence, Wisdom and Charisma
+
+Weight: 0~
+
+COPY_EXISTING ~AR9711.are~ ~override~
+      LPF ADD_AREA_ITEM
+      INT_VAR
+        container_to_add_to = 6
+      STR_VAR
+        item_to_add = ~C0FF-MI1~
       END

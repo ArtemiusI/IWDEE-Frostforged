@@ -1,6 +1,8 @@
 COPY ~%MOD_FOLDER%/bam~ ~override~
 COPY ~%MOD_FOLDER%/itm~ ~override~
 
+EXTEND_TOP ~baldur.bcs~ ~%MOD_FOLDER%/scripts/items.baf~
+
 DEFINE_ACTION_FUNCTION cd_new_portrait_icon
   INT_VAR string = 0
   STR_VAR bam_file = "****"
@@ -253,6 +255,21 @@ Requires:
  8 Strength
 
 Weight: 45~
+
+COPY_EXISTING ~DRAGARM.ITM~ ~OVERRIDE~
+SAY DESC ~This armor was crafted by the dwarven smiths and priests of Clan Battlehammer when one of their own, Bruenhal, led a band of heroes in the defeat of a black dragon far to the south. Some dwarves turn up their noses at the thought of wearing armor made from the remains of a dragon, but Bruenhal proudly wore the armor until the end of his days.
+
+STATISTICS:
+
+Equipped abilities:
+– Save vs. Spell: +2
+– Acid Resistance: +50%
+
+Armor Class: 1 (0 vs. piercing, slashing, and missile; 2 vs. crushing)
+Requires:
+ 6 Strength
+
+Weight: 10~
 
 COPY_EXISTING ~ELROBE.ITM~ ~OVERRIDE~
 SAY DESC ~Created during the golden age of the elves of the Seldarine's Hand and the dwarves of Dorn's Deep, it was worn by the elven wizards of the Hand. Although a very cumbersome robe, it provided its wearer enhanced mastery with the elements of cold, fire, and electricity.
@@ -691,6 +708,20 @@ Weight: 4~
 
 // GLOVES
 
+COPY_EXISTING ~OHBRAC01.ITM~ ~OVERRIDE~
+SAY DESC ~Lin Mei was described as a woman of exquisite beauty and a hellish temper. When her family urged her to find a husband, she issued a challenge to the men of the land: Whoever could make her yield in single combat could have her hand. The suitors gathered from all across Kara-Tur to test their skill, and although she fought with no weapons but her open hands, she bested every single one of them. Disappointed, all suitors left but one—a young man with kind eyes and a pair of gilded bracers, which he presented to her as a gift. "No one can hope to tame your passions," he said, "and those who would try will never understand your heart. May these trinkets serve as a reminder that your temper is your own and not to be controlled." Lin Mei did not marry that man, but she left home with him that day to seek adventure, and together they spent the rest of their lives in closer partnership than any husband and wife. Eventually the pair retired, and Lin Mei quietly disappeared from the annals of history. All that remains of her story are the bracers she wore, still burning with the fire of her untamed passion.
+
+STATISTICS:
+
+Combat abilities:
+– THAC0: +2 when attacking with fists
+– 25% chance of inflicting 1d2 points of fire damage when attacking with fists
+
+Charge abilities:
+– Flaming Fists once per day
+
+Weight: 2~
+
 COPY_EXISTING ~KAYGLOV.ITM~ ~OVERRIDE~
 SAY DESC ~Worn by Kaylessa, weapons master of the Seldarine's Hand. Her prowess in archery only bested by her beauty, Kaylessa was devoted to honing the battle skills of any elf under her. If there were any heroes at the Battle of Seldarine's Hand, Kaylessa was one of them. She was a shining example of courage in the face of impending doom as she fearlessly led her people against orc and goblin hordes. Even after the fall of the Hand, her commitment to battle and her people remained strong. Her last wish was to die in glorious battle.
 
@@ -789,6 +820,17 @@ Charge abilities:
   Duration: 200 seconds
 
 Weight: 0~
+
+COPY_EXISTING ~LYRE.ITM~ ~OVERRIDE~
+SAY DESC ~The Lyre of Progression was created by the bard Sedini Paletto. Sedini was a teacher of young aspiring bards during difficult times. This instrument, held close at all times, helped Sedini fight off those who would attack him or his students. When Sedini grew old, he passed it on to his best student, Galwen Alaman. Galwen continued teaching for a few years before setting out into the wilderness on a life of adventure. It is believed that he lost the lyre when he accidentally dropped it in a marsh.
+
+STATISTICS:
+
+Equipped abilities:
+– Casting Level (Arcane): +2
+– Lingering Song: Bard song effects linger on for two additional rounds after the bard stops singing
+
+Weight: 2~
 
 // RINGS
 
@@ -1138,6 +1180,27 @@ Requires:
  12 Strength
 
 Weight: 3~
+
+COPY_EXISTING ~CAIRN.ITM~ ~OVERRIDE~
+SAY DESC ~Named for its ability to lay warriors low, the Cairn Blade was used by the mercenary Adal Kerrn. Kerrn was a skilled heavy infantryman. He and his company, Kerrn's Breakers, hired themselves out to all sorts of warlords, bandits, wizards, and religious leaders. They were typically placed at the front of the battlefield, where they would intercept charging heavy cavalry units and break their formation. Kerrn died in 1054 DR when he accidentally killed the horse of a heavily armored foe. The horse fell on top of Kerrn, killing him. In the madness of the battle that followed, most of his comrades were routed. Though Kerrn's body was never found, the group that had employed him at the time, the church of Helm, recovered his distinctive sword.
+
+STATISTICS:
+
+Combat abilities:
+– Knockdown: Each attack has a 50% chance to knock the target prone for the next round on a failed Save vs. Death at -3, rendering them unable to act and reducing their Armor Class vs. melee attacks by 4, but increasing their Armor Class vs. ranged attacks by 4. This has no effect on larger creatures.
+
+THAC0: +4
+Damage: 1d10+4 (slashing)
+Speed Factor: 6
+Proficiency Type: Two-handed Sword
+Type: Two-handed
+Requires:
+ 14 Strength
+
+Weight: 20~
+
+COPY_EXISTING ~C0KNOCKD.SPL~ ~OVERRIDE~
+   LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Knockdown~) END
 
 COPY_EXISTING ~CDGLOOM.ITM~ ~OVERRIDE~
 SAY DESC ~In 834 DR, a wizard named Legedain the Wiser caught a renowned thief breaking into his tower. The thief was a cynical burglar named Ilfain Blackfeather. Legedain was growing old and becoming tired of his frail body. To remedy the situation, he cast Magic Jar and forced Ilfain's spirit into a host gem. Legedain then transferred his soul to the young elf's body and left the gem on a shelf nearby. One hundred years later, Legedain decided to do something with it. He created a sword for his arrogant bodyguard, Gundak, and transferred Ilfain's spirit from the host gem into the sword. Ilfain, always highly critical in life, started telepathically criticizing Gundak in combat. Gundak became annoyed with the sword after two weeks, and he threw it into the street. A series of warriors picked it up and discarded it after short periods of ownership. Over time, the weapon has simply come to be known by its current name.
@@ -1751,6 +1814,25 @@ Requires:
  13 Strength
 
 Weight: 15~
+
+COPY_EXISTING ~PIKEMAN.ITM~ ~OVERRIDE~
+SAY DESC ~This notched and tarnished blade once saw a great deal of service in the employ of Kath Tahl, a warlord and bandit who roamed the countryside of the western heartlands. Kath was fond of destroying peasant militias to send a warning to other communities. He used this sword to that end. When the nervous defenders tried to form a line of pikes, Kath and other heavily armored men would wade into the fray, hacking their weapons apart and breaking their formation. Once the villagers had been sent into disarray, his men would fall in with cavalry and take what they wanted. Kath eventually met his end when a rival warlord, Marhap the Blackbeard, destroyed Kath's army.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class vs. Piercing: +4
+– This weapon has twice the range of a normal two-handed sword
+
+THAC0: +2
+Damage: 1d10+2 (slashing)
+Speed Factor: 7
+Proficiency Type: Two-handed Sword
+Type: Two-handed
+Requires:
+ 14 Strength
+
+Weight: 8~
 
 COPY_EXISTING ~PRESDAG.ITM~ ~OVERRIDE~
 SAY DESC ~Presio's dagger was obviously only for ceremonial functions, as her unholy vows prohibited her from using edged weapons in combat. She received this weapon as a gift upon attaining the rank of Most Debilitating Holiness. The blade has been enchanted to make it especially sharp and venomous. Due to its unholy nature, however, those without evil intent find themselves unable to hold it without feeling an overwhelming sense of unease.
