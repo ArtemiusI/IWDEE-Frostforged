@@ -722,6 +722,20 @@ Charge abilities:
 
 Weight: 2~
 
+COPY_EXISTING ~OHBRAC02.ITM~ ~OVERRIDE~
+SAY DESC ~These bracers were commissioned for the legendary martial artist Sarutobi by a wealthy Shou Lung merchant, in anticipation of a duel between Sarutobi and a powerful stone giant. Yet when he discovered the merchant's gift, so the story goes, Sarutobi refused to wear the bracers, saying "I will crush this giant's skull with my bare hands, and I need no magic to help me do it!" Sarutobi carried the day, and the merchant locked the bracers away in his safe. When Sarutobi disappeared one day through a planar door, the merchant took the opportunity to give the bracers to Sarutobi's son, as small compensation for the loss of his father. The boy took the bracers and devoted his life to searching for his father. He never found him.
+
+STATISTICS:
+
+Equipped abilities:
+– Strength: +1 (+100 exceptional)
+
+Combat abilities:
+– All crushing damage inflicted by the character is increased by 15%
+– Knockdown: Each unarmed attack has a 50% chance to knock the target prone for the next round on a failed Save vs. Death at -3, rendering them unable to act and reducing their Armor Class vs. melee attacks by 4, but increasing their Armor Class vs. ranged attacks by 4. This has no effect on larger creatures.
+
+Weight: 2~
+
 COPY_EXISTING ~KAYGLOV.ITM~ ~OVERRIDE~
 SAY DESC ~Worn by Kaylessa, weapons master of the Seldarine's Hand. Her prowess in archery only bested by her beauty, Kaylessa was devoted to honing the battle skills of any elf under her. If there were any heroes at the Battle of Seldarine's Hand, Kaylessa was one of them. She was a shining example of courage in the face of impending doom as she fearlessly led her people against orc and goblin hordes. Even after the fall of the Hand, her commitment to battle and her people remained strong. Her last wish was to die in glorious battle.
 
@@ -969,6 +983,38 @@ Requires:
  13 Wisdom
 
 Weight: 20~
+
+COPY_EXISTING ~SHLDBCH.ITM~ ~OVERRIDE~
+SAY DESC ~Representatives of Umberlee, the so-called Bitch Queen, were given this shield to display to the court of Istishia on trips to the Elemental Plane of Water. It protected its bearers on numerous occasions. The envoys of the Queen of the Sea rarely abused the powers of the device, but it only took one mischievous priest to lose the item. Legends say that Herren of Umberlee used the shield's sanctuary to attack and destroy a number of elementals before the water lord Istishia shifted the priest to the Paraelemental Plane of Ice, where he froze to death. From there, it is believed that the shield floated around the planes for many years, only recently resurfacing in Faerûn.
+
+STATISTICS:
+
+Charge abilities:
+– Smashing Wave twice per day
+
+Equipped abilities:
+– Armor Class: +3
+– Water elementals ignore the bearer in combat
+
+Requires:
+ 12 Strength
+
+Weight: 4~
+
+COPY_EXISTING ~SHLDRED.ITM~ ~OVERRIDE~
+SAY DESC ~Divination about this item reveals little, save that it once belonged to a woman called the Red Knight, a devoted worshipper and soldier of Tempus. A cult to the Red Knight exists in a few places around Faerûn. The little information that is known about the religion indicates that the Red Knight is a quasi-deity representing strategy and tactics in war. The faith consists entirely of small groups of Tempurans who favor the Red Knight's emphasis of military structure and order. The shield is plain in design and construction, with a small icon of a horse's head carved into the back rim of the item.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +3
+– Enhanced Aid (+2 to Hit and Saving Throws, +16 to Hit Points)
+
+Requires:
+ 12 Strength
+ 15 Intelligence
+
+Weight: 4~
 
 COPY_EXISTING ~STOUT.ITM~ ~OVERRIDE~
 SAY DESC ~This small shield was created as a gift from the leader of Clan Battlehammer to one of his trusted servants. The servant, Wurdar Stoutbrew, protected the clan leader's family from being killed and eaten by yeti. Wurdar wore the shield proudly for ten years before he was killed by orcs in the Spine of the World. His sacrifice allowed a few key members of the Battlehammer clan to escape to safety.
@@ -1535,6 +1581,24 @@ Requires:
 
 Weight: 1~
 
+COPY_EXISTING ~GIVING.ITM~ ~OVERRIDE~
+SAY DESC ~This black and silver morning star was created by a Cormyrean necromancer called Dameth the Wan. Although it appears to be a sinister weapon, the unadorned surfaces of the morning star mask its dreadful power. The weapon was sold to a priest of Myrkul who put it to good use in his battles against adventurers. Eventually, however, the priest was overcome by a paladin of Lathander, who confiscated the item. When the mountain temple where the morning star was contained was sacked by giants in 1190 DR, the history of the weapon ended.
+
+STATISTICS:
+
+Combat abilities:
+– Devourer: Upon killing a living creature, the wielder is healed for 5% of their maximum hit points and gain a +1 bonus to Strength for the next 2 rounds
+
+THAC0: +3
+Damage: 2d4+3 (crushing)
+Speed Factor: 4
+Proficiency Type: Flail/Morning Star
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 9~
+
 COPY_EXISTING ~GSLEEP.ITM~ ~OVERRIDE~
 SAY DESC ~This weapon was used by the human ranger Althax Grom. Althax hated the giants that plagued his homeland and was trained to exterminate them from a young age. Although Althax originally fought his foes using the sword and bow, he quickly decided that those weapons were too slow against his huge foes. His druid friend, Eladan, enchanted this hammer for him. The reputation of the weapon grew as legends of Althax grew. Even though the war hammer has passed through many hands since Althax's untimely demise, Giant's Sleep will always be remembered as the weapon of that powerful warrior.
 
@@ -1874,6 +1938,111 @@ Requires:
 
 Weight: 0~
 
+COPY_EXISTING ~SHPLATE.ITM~ ~OVERRIDE~
+SAY DESC ~Made during the golden age between the elves of the Seldarine's Hand and the dwarves of Dorn's Deep. The craftsmanship of this short sword is of exceptional dwarven quality and is laden with elven runes across its glowing blade. There were swordsmen within the Seldarine's Hand who preferred the quickness and balance of a short sword. This was made to accommodate those swordsmen who preferred to deliver death through quickness and grace rather than brute strength.
+
+STATISTICS:
+
+Equipped abilities:
+– Does not disable stealth
+
+THAC0: +3
+Damage: 1d6+3 (piercing)
+Speed Factor: 3
+Proficiency Type: Short Sword
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight: 3~
+
+COPY_EXISTING ~SHROBE.ITM~ ~OVERRIDE~
+SAY DESC ~This robe is made up of some unknown incorporeal material that gives its wearer a shadowed look. Besides giving excellent protection, it also provides some resistance against magic.
+
+STATISTICS:
+
+Equipped abilities:
+– Magic Resistance: +10%
+– Wearer is only partially visible as per an Improved Invisibility spell
+
+Weight: 5~
+
+COPY_EXISTING ~SHSSWRD.ITM~ ~OVERRIDE~
+SAY DESC ~Made during the golden age between the elves of the Seldarine's Hand and the dwarves of Dorn's Deep. The craftsmanship of this short sword is of exceptional dwarven quality and is laden with elven runes across its glowing blade. There were swordsmen within the Seldarine's Hand who preferred the quickness and balance of a short sword. This was made to accommodate those swordsmen who preferred to deliver death through quickness and grace rather than brute strength.
+
+STATISTICS:
+
+Combat abilities:
+– Attacks per round: +1/2
+
+THAC0: +3
+Damage: 1d6+3 (piercing)
+Speed Factor: 3
+Proficiency Type: Short Sword
+Type: One-handed
+Requires:
+ 5 Strength
+
+Weight: 3~
+
+COPY_EXISTING ~SHSTAFF.ITM~ ~OVERRIDE~
+SAY DESC ~Made during the golden age between the elves of the Seldarine's Hand and the dwarves of Dorn's Deep. This staff was carved and shaped with the utmost care and then etched with elven runes across its length. Although most of the Hand's wizards chose not to engage in melee combat, they wielded this staff as a symbol of power and unity.
+
+STATISTICS:
+
+Equipped abilities:
+– Spell Duration (Arcane): +20%
+
+THAC0: +3
+Damage: 1d6+3 (crushing)
+Speed Factor: 4
+Proficiency Type: Quarterstaff
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 4~
+
+COPY_EXISTING ~SLAYER.ITM~ ~OVERRIDE~
+SAY DESC ~A fallen paladin called Matthain "Blackwatch" used this weapon to kill one hundred and one knights of his former king. Matthain's family, Chamberlain, had a long tradition of producing paladins of Tyr. Matthain's father, Garlan, slew a powerful high priest of Bane who had been posing a threat to the kingdom. The priest's evil magic brought him back from the dead. This priest, called "the Chamberlain Haunt," cursed the Chamberlain family to only produce stillborn children until he had been appeased. Matthain, as the heir to the family, took it upon himself to remove the curse. The Chamberlain Haunt told Matthain that he must kill one hundred and one knights of the king.
+
+Matthain began his grim task, slaughtering every knight he came across. He brought the skull and shield of each warrior to the Chamberlain Haunt as proof of his deed. The king dispatched bands of knights and heroes to kill Matthain, but he proved too difficult a foe. Finally, after three years of murdering, Matthain had killed one hundred knights. He told the Chamberlain Haunt that it was time to end the curse. The Chamberlain Haunt corrected him, reminding the fallen paladin that he had to kill one hundred and one knights of the king.
+
+Overcome with misery and regret, Matthain nodded and immediately threw himself on his own spear. With Matthain and Garlan dead, and the letter of his requirements fulfilled, the curse was ended and the Chamberlain Haunt was called to Acheron by Bane, screaming all the way.
+
+STATISTICS:
+
+Combat abilities:
+– Executioner: Each attack has a 3% chance of instantly killing the target
+
+THAC0: +5
+Damage: 1d8+5 (piercing)
+Speed Factor: 3
+Proficiency Type: Spear
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 2~
+
+COPY_EXISTING ~SLINGED.ITM~ ~OVERRIDE~
+SAY DESC ~The halfling warrior-rogue Edley Bramble was the owner of this fine weapon. Edley was a villain to some, but a hero to many more. Despite the fact that most halflings publicly regard Edley as a scoundrel and bad influence on halfling culture, many secretly revere and admire him. Edley's pranks and adventures among humans and elves are recorded in some of the folk songs created by Waren Blackbird.
+
+STATISTICS:
+
+Combat abilities:
+– Knockdown: Each attack has a 20% chance to knock the target prone for the next round on a failed Save vs. Death at -3, rendering them unable to act and reducing their Armor Class vs. melee attacks by 4, but increasing their Armor Class vs. ranged attacks by 4. This has no effect on larger creatures.
+
+THAC0: +3
+Damage: +2 (missile)
+Speed Factor: 4
+Proficiency Type: Sling
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 0~
+
 COPY_EXISTING ~STORM.ITM~ ~OVERRIDE~
 SAY NAME2 ~Storm Bow +3~
 SAY DESC ~This weapon is holy to warriors in the service of Talos, god of storms and destruction, and has seen decades of use in their capable hands. A shortbow made of many composite layers of wood, the Storm Bow has been used against the myriad enemies of the church of Talos. Most recently, the bow was in the possession of a Storm Knight named Kalassan Brevered, who was killed after striking down a number of rangers and druids on the Moonshae Isles.
@@ -1910,6 +2079,26 @@ Proficiency Type: Club
 Type: One-handed
 Requires:
  17 Strength
+
+Weight: 4~
+
+COPY_EXISTING ~SW1H45.ITM~ ~OVERRIDE~
+SAY DESC ~This weapon was originally owned by a young officer guarding a diplomatic envoy from Kara-Tur. When the envoy's caravan was ambushed by a small band of yuan-ti raiders, most of the guards were quickly dispatched during a surprise attack, save for one wagon and the young woman defending it. In wave after wave, the yuan-ti charged at the officer, and in wave after wave, they were cut down by the speed and fury of her steel. At last the leader of the yuan-ti raiders faced off with the young woman, and although he did finally overpower her, he was astonished by her skill. The katana she carried was recovered and later enchanted by a high priest of Sseth. The once graceful blade was tainted by dark magic and now guides those who wield it to inflict the severest of wounds upon their enemies.
+
+STATISTICS:
+
+Combat abilities:
+– Keen: +5% bonus to Critical Hit Chance
+– Deadly Criticals: Critical hits with this weapon deal an additional 5% of the target's maximum hit points in damage
+– Cursed Blade: Critical hits inflict a non-cumulative -2 penalty to Luck on the target for 4 rounds
+
+THAC0: +2
+Damage: 1d10+2 (slashing)
+Speed Factor: 2
+Proficiency Type: Katana
+Type: One-handed
+Requires:
+ 6 Strength
 
 Weight: 4~
 
