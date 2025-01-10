@@ -185,7 +185,7 @@ Equipped abilities:
 – Armor Class: 2 (0 vs. slashing, 1 vs. missile and piercing)
 – Immunity to instant death effects
 – Wearer cannot backstab or use thieving skills
-– Redemption: The wearer's hit points may not reach zero. Upon reaching one hit point, they cannot take any action, suffer damage, or be targeted by enemies for the next round. After the round has passed, a Greater Restoration spell is cast upon the wearer and their hit points may reach zero. The wearer loses this protection for the next 8 hours.
+– Redemption: The wearer's hit points may not reach zero. Upon reaching one hit point, they cannot take any action, suffer damage, or be targeted by enemies for the next round. After the round has passed, a Greater Restoration spell is cast upon the wearer. The wearer then loses this protection for the next 8 hours.
 
 Requires:
  6 Strength
@@ -303,6 +303,31 @@ Requires:
  8 Strength
 
 Weight: 15~
+
+COPY_EXISTING ~MOURNER.ITM~ ~OVERRIDE~
+SAY DESC ~This unique suit of armor is of foreign design, created for a Kara-Turan samurai from the Baika Clan. The armor, crafted from thin, stiff leather, is dyed black but features the insignia of the plum blossom, the mon of the Baika Clan. It was only worn into battle once, when Baika Himuro fought a hopeless battle against the enemy samurai that flooded into his ancestral estate. It is believed that the enemy clan captured the armor and later traded it for siege equipment.
+
+STATISTICS:
+
+Equipped abilities:
+– Wearer is unaware of <PRO_HISHER> current Hit Points
+– Great Fortitude: The wearer is healed for three hit points each time they take damage.
+– Piercing Resistance: 50%
+– Slashing Resistance: 50%
+– Missile Resistance: 50%
+– Open Locks: -25%
+– Find Traps: -25%
+– Pick Pockets: -25%
+– Move Silently: -25%
+– Hide In Shadows: -25%
+– Immunity to pain
+– May only be removed with a Remove Curse spell
+
+Armor Class: 4 (6 vs. piercing and missile)
+Requires:
+ 4 Strength
+
+Weight: 20~
 
 COPY_EXISTING ~NAMJI.ITM~ ~OVERRIDE~
 SAY DESC ~A wizard from Thesk named Namji was the creator of this powerful robe. While it does not impart a host of magical resistances to the wearer, it is extremely useful for spellcasters who find themselves in dangerous situations often. Namji himself was a reckless battle wizard who delighted in hurling spells from the midst of the fray. He was feared for his use of Namji's Burning Hands, an adaptation of the common Burning Hands spell.
@@ -619,6 +644,51 @@ Equipped abilities:
 
 Weight: 4~
 
+COPY_EXISTING ~MANTLECS.ITM~ ~OVERRIDE~
+SAY DESC ~This seemingly threadbare robe had become "dormant" upon Lysan's command so as not to expose herself as a priestess of Auril. When as much as a single snowflake falls upon the robe, it transforms into a scintillating cloak of white that allows the wielder to float above snow drifts and walk through even raging rivers with ease. Most merchants will not wish to purchase this item, or will do so at a very low price, as they see it as a sacred item of Auril the Frostmaiden and likely to attract her followers... and her displeasure.
+
+Created during the ceremonies of the Coming Storm (the onset of winter) to Auril, these robes are specially created to resist flames and allow the wearer to resist any attempt to stop or hold them. Although the priestesses of Auril are naturally resistant to cold and can move through snow and icy rivers with ease, these cloaks amplify the protection of the goddess, allowing the wearer additional cold resistance (which allows a wearer already immune to cold to absorb its power) and even goes so far as to leach the heat from fire attacks directed at the wearer. In addition, the robe allows the wearer to pass over or through any obstacle designed to hold them, such as Web spells, ghoul paralyzation, Hold Person spells, and the like.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+– Free Action
+– Immunity to Icelance, Ice Storm, Cone of Cold and Otiluke's Freezing Sphere
+– Fire/Cold Resistance: +25%
+
+Charge abilities (once per day):
+– Ice Storm
+  Damage: 3d10
+  Range: Self
+  Area of effect: 15-ft. radius
+ 
+Weight: 1~
+
+COPY_EXISTING ~MANTLEHF.ITM~ ~OVERRIDE~
+SAY DESC ~An extremely vivid piece of clothing, the Mantle of Hell's Furnace was woven from the beards of fiery azer. It was worn by a high priest of Kossuth named Ullabem for fifteen years before he was killed fighting a priestess of Istishia. When the priestess attempted to destroy it, efreet allies of Ullabem tracked her down and killed her. One of the efreeti kept the cloak until it was requested of him by a clever thief who summoned the genie out of an enchanted block of sandalwood. It is believed that the cloak retains its powers until they are used a certain number of times. Once that point is reached, the cloak is summoned back to the Elemental Plane of Fire.
+
+STATISTICS:
+
+Equipped abilities:
+– Fire Shield (Red)
+
+Charge abilities (once per day each):
+– Flame Strike
+  Damage: 6d8 fire to target and nearby victims
+  Area of effect: 5-ft. radius
+ 
+– Fire Storm
+  Damage: 2d8+15 fire (Save vs. Spell for half)
+  Range: Visual range of the caster
+  Area of Effect: 14-ft. radius
+
+– Charm Fire Elemental Kin
+  Range: 60 ft.
+  Duration: 1 turn
+
+Weight: 4~
+
 // GLOVES
 
 COPY_EXISTING ~KAYGLOV.ITM~ ~OVERRIDE~
@@ -777,6 +847,50 @@ Requires:
 
 Weight: 5~
 
+COPY_EXISTING ~CDMYST.ITM~ ~OVERRIDE~
+SAY DESC ~This front of this huge steel shield is decorated with black enameled patterns and a single skull set in the center. The interior of the shield is etched with encrypted ancient writings. The only legible words are at the top and read, "AND WHAT OF THE DEAD?" The history of the item is completely hidden from divination.
+
+Edion has deciphered a bit more of the text, unlocking new abilities of the shield.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +4, an extra +1 vs. missile attacks
+– Turn Undead Level: +4
+– Spell Immunity: Necromancy
+
+Charge abilities:
+– Greater Restoration once per day
+  Fully heals
+  Range: Touch
+  Duration: Permanent
+  Area of Effect: Self
+
+Requires:
+ 15 Strength
+ 16 Wisdom
+
+Weight: 20~
+
+COPY_EXISTING ~CDSTOUT.ITM~ ~OVERRIDE~
+SAY DESC ~This small shield was created as a gift from the leader of Clan Battlehammer to one of his trusted servants. The servant, Wurdar Stoutbrew, protected the clan leader's family from being killed and eaten by yeti. Wurdar wore the shield proudly for ten years before he was killed by orcs in the Spine of the World. His sacrifice allowed a few key members of the Battlehammer clan to escape to safety.
+
+Combined with the icon of Clan Battlehammer, the shield's abilities have been further enhanced.
+
+STATISTICS:
+
+Equipped abilities:
+– Racial Affinity: Dwarves gain a +2 bonus to Constitution when wielding this shield
+– Armor Class: +2
+– Strength: +1
+– Maximum Hit Points: +10
+– No protection against missile attacks
+
+Requires:
+ 4 Strength
+
+Weight: 4~
+
 COPY_EXISTING ~DNTSHD2.ITM~ ~OVERRIDE~
 SAY DESC ~Tiernon has apparently "awoken" the enchantment that was hibernating within this shield (most likely due to the giant's fist that struck it). He has retraced the runes along the edges and redrawn the Denthelm symbol in its center. The shield seems brighter than it did before, lighter, and there is a slight vibration when it is held, as if it is humming to itself. 
 
@@ -797,6 +911,37 @@ Requires:
  12 Strength
 
 Weight: 2~
+
+COPY_EXISTING ~MYSTERY.ITM~ ~OVERRIDE~
+SAY DESC ~This front of this huge steel shield is decorated with black enameled patterns and a single skull set in the center. The interior of the shield is etched with encrypted ancient writings. The only legible words are at the top and read, "AND WHAT OF THE DEAD?" The history of the item is completely hidden from divination.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +4, an extra +1 vs. missile attacks
+– Turn Undead Level: +2
+– Spell Immunity: Necromancy
+
+Requires:
+ 15 Strength
+ 13 Wisdom
+
+Weight: 20~
+
+COPY_EXISTING ~STOUT.ITM~ ~OVERRIDE~
+SAY DESC ~This small shield was created as a gift from the leader of Clan Battlehammer to one of his trusted servants. The servant, Wurdar Stoutbrew, protected the clan leader's family from being killed and eaten by yeti. Wurdar wore the shield proudly for ten years before he was killed by orcs in the Spine of the World. His sacrifice allowed a few key members of the Battlehammer clan to escape to safety.
+
+STATISTICS:
+
+Equipped abilities:
+– Racial Affinity: Dwarves gain a +1 bonus to Constitution when wielding this shield
+– Armor Class: +2
+– No protection against missile attacks
+
+Requires:
+ 4 Strength
+
+Weight: 4~
 
 // WEAPONS
 
@@ -1086,6 +1231,26 @@ Requires:
 
 Weight: 6~
 
+COPY_EXISTING ~CELEBRA.ITM~ ~OVERRIDE~
+SAY NAME2 ~The Celebrant's Blade +3~
+SAY DESC ~This beautiful axe was carefully made by Briath Silverhand, a master craftsman and devoted worshipper of Moradin. Briath created the weapon to celebrate the completion of a glorious monument to his god, the father of the dwarven race. He placed it in the monument should a hero need it to liberate Dorn's Deep at some future date.
+
+STATISTICS:
+
+Combat abilities:
+– Racial Affinity: Dwarves wield this weapon as though a +5 keen (+10% critical hit chance) weapon
+
+THAC0: +3, +5 vs. evil creatures
+Damage: 1d8+3, +5 vs. evil creatures
+Damage type: slashing
+Speed Factor: 3
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 5~
+
 COPY_EXISTING ~CYNICIS.ITM~ ~OVERRIDE~
 SAY DESC ~In 834 DR, a wizard named Legedain the Wiser caught a renowned thief breaking into his tower. The thief was a cynical burglar named Ilfain Blackfeather. Legedain was growing old and becoming tired of his frail body. To remedy the situation, he cast Magic Jar and forced Ilfain's spirit into a host gem. Legedain then transferred his soul to the young elf's body and left the gem on a shelf nearby. One hundred years later, Legedain decided to do something with it. He created a sword for his arrogant bodyguard, Gundak, and transferred Ilfain's spirit from the host gem into the sword. Ilfain, always highly critical in life, started telepathically criticizing Gundak in combat. Gundak became annoyed with the sword after two weeks, and he threw it into the street. A series of warriors picked it up and discarded it after short periods of ownership. Over time, the weapon has simply come to be known by its current name.
 
@@ -1187,6 +1352,23 @@ Requires:
 
 Weight: 1~
 
+COPY_EXISTING ~EHDAG.ITM~ ~OVERRIDE~
+SAY DESC ~This dagger was created by Apsel the Scrimshander, a resident of Easthaven. The dagger has a keen edge, and the grip is made of intricately carved knucklehead trout bone. It is notably larger than a regular dagger, with its curved, carefully sharpened edge making it more ideal for cutting.
+
+STATISTICS:
+
+Combat abilities
+– Keen: +5% bonus to Critical Hit Chance
+
+Damage: 1d6 (piercing or slashing, whichever is better)
+Speed Factor: 1
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+
 COPY_EXISTING ~EREVAIN.ITM~ ~OVERRIDE~
 SAY DESC ~This broad sword used to belong to Erevain Blacksheaf, a wandering elf from Evereska. It was made in 1221 DR by Evereskan Greycloaks. Erevain's sword was unusual among his people, who normally favor lighter swords.
 
@@ -1229,6 +1411,27 @@ Requires:
  5 Strength
 
 Weight: 3~
+
+COPY_EXISTING ~FKILLER.ITM~ ~OVERRIDE~
+SAY DESC ~This deceptively mundane-looking battle axe has a short but strange history. According to philosophers of magic, Faith Killer was enchanted by the non-belief of its owner, the warrior Erion the Skeptic. A rarity in Faerûn, Erion was a man who denied the existence of holy magic and the gods themselves. He was known for his attempts to prove that priests were charlatans and holy magic was, in actuality, a different form of standard magic. Sages believe that Erion's intense opposition to holy men and women actually generated sympathetic magical powers in his weapon. Priests of Selûne in Westgate confiscated the axe when they killed Erion in self-defense. It is currently believed that Erion is one of the unbelievers used as a building block in Myrkul's Bone Castle.
+
+STATISTICS:
+
+Combat abilities:
+– Attacks cause the target's divine spells to fail for the next round on a failed Save vs. Death at -5
+
+THAC0: +2, +5 vs. priests and paladins
+Damage: 1d8+2, +5 vs. priests and paladins
+Damage type: slashing
+Speed Factor: 5
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 5~
+COPY_EXISTING ~FKILLER1.SPL~ ~OVERRIDE~
+   LPF ALTER_EFFECT INT_VAR match_opcode = 139 parameter1 = RESOLVE_STR_REF (~Spell Failure~) END
 
 COPY_EXISTING ~FAYR.ITM~ ~OVERRIDE~
 SAY NAME2 ~Fayr's Halberd +2~
@@ -1472,6 +1675,24 @@ Requires:
 
 Weight: 7~
 
+COPY_EXISTING ~MIELIKK.ITM~ ~OVERRIDE~
+SAY DESC ~A lesser-known weapon, historically only used by rangers serving Mielikki, this blade has a very humble and simple background. The Cradle of Mielikki was originally blessed by a triumvirate of druids for a ranger named Kell Pathwalker. Kell led a peaceful life, fending off the occasional orc or goblin who might wander into his lands. When he died of old age, the druids had no one to pass the blade on to. The oldest of them, Bimon, held on to the scimitar, but never used it in battle. When Bimon and his associates left their grove for an extended period of time, a wandering mercenary robbed the hollow tree of its riches. He carried the scimitar north to the Spine of the World, where he died of exposure.
+
+STATISTICS:
+
+Combat abilities:
+– Deals 2 additional points of damage against monsters and undead
+
+THAC0: +1
+Damage: 1d8+1 (slashing)
+Proficiency Type: Scimitar/Wakizashi/Ninjatō
+Speed Factor: 4
+Type: One-handed
+Requires:
+ 8 Strength
+
+Weight: 4~
+
 COPY_EXISTING ~MYRLOCH.ITM~ ~OVERRIDE~
 SAY DESC ~It is believed that fae creatures helped create this beautiful sword, and legends say that it was forged in the cool depths of Myrloch, the large lake at the center of Gwynneth in the Moonshaes. The weapon has an unearthly look to it, and it is believed to be quite old. The only individual known to have carried the weapon was a half-elven bard named Daen Winterbrush. It is said by some that after he found the sword, quite by accident, he was blessed with exceptional creativity and powerful sensitivity to the world around him. He traveled for forty years and is known for some of the most unique, haunting melodies in Faerûn. It is believed that Daen eventually became too melancholy at the sights of misery and oppression that he encountered in his travels, and that the fae smiths of the Moonshae Isles welcomed him into the breast of Myrloch.
 
@@ -1531,6 +1752,46 @@ Requires:
 
 Weight: 15~
 
+COPY_EXISTING ~PRESDAG.ITM~ ~OVERRIDE~
+SAY DESC ~Presio's dagger was obviously only for ceremonial functions, as her unholy vows prohibited her from using edged weapons in combat. She received this weapon as a gift upon attaining the rank of Most Debilitating Holiness. The blade has been enchanted to make it especially sharp and venomous. Due to its unholy nature, however, those without evil intent find themselves unable to hold it without feeling an overwhelming sense of unease.
+
+STATISTICS:
+
+Combat abilities:
+– Hit target must save vs. Poison or suffer 1 point of poison damage per second for 8 seconds
+
+Equipped abilities:
+– Evil clerics may equip this dagger—however, they are unable to attack while wielding it. Instead, they gain a +1 bonus to Casting Speed, a +25% bonus to Divine Spell Duration, and a +6 bonus to Turn Undead Level.
+
+THAC0: +2
+Damage: 1d4+2 (piercing)
+Speed Factor: 0
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+ 12 Wisdom
+
+Weight: 1~
+
+COPY_EXISTING ~QUINN.ITM~ ~OVERRIDE~
+SAY DESC ~This sling was blessed for Quinn Silverfinger by Quinn's superior at the Golden Spires in Amn. Quinn was quite proud of the sling and carried it with him always. He only had reason to use the sling on three different occasions, but it proved to be very useful.
+
+STATISTICS:
+
+Equipped abilities:
+– Racial affinity: Halflings wielding this weapon receive a +2 bonus to damage and luck
+
+THAC0: +5
+Damage: +1 (missile)
+Speed Factor: 1
+Proficiency Type: Sling
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 0~
+
 COPY_EXISTING ~STORM.ITM~ ~OVERRIDE~
 SAY NAME2 ~Storm Bow +3~
 SAY DESC ~This weapon is holy to warriors in the service of Talos, god of storms and destruction, and has seen decades of use in their capable hands. A shortbow made of many composite layers of wood, the Storm Bow has been used against the myriad enemies of the church of Talos. Most recently, the bow was in the possession of a Storm Knight named Kalassan Brevered, who was killed after striking down a number of rangers and druids on the Moonshae Isles.
@@ -1551,6 +1812,75 @@ Requires:
  15 Strength
 
 Weight: 3~
+
+COPY_EXISTING ~SVIAN.ITM~ ~OVERRIDE~
+SAY DESC ~A massive club, this weapon used to belong to the powerful barbarian warrior Svian of the Elk Tribe. Svian was a grim man, tall and wiry, who was known throughout the north for his dire disposition and serious manner. In battle, unlike his kin, he rarely became excited or panicked. He simply held his ground and destroyed everyone that came near him. It is said that when Svian was mortally wounded, he simply walked over to a nearby rock and sat down, never indicating that he was suffering. It was several hours before his kinsmen realized that he was dead.
+
+STATISTICS:
+
+Equipped abilities:
+– Fortitude: The wielder is healed for one hit point each time they take damage.
+
+THAC0: +5
+Damage: 1d10+5 (crushing)
+Speed Factor: 9
+Proficiency Type: Club
+Type: One-handed
+Requires:
+ 17 Strength
+
+Weight: 4~
+
+COPY_EXISTING ~TONGUE.ITM~ ~OVERRIDE~
+SAY DESC ~A wicked-looking dagger with a dark history, the Salamander's Tongue is prized both for its use as a weapon and its hidden magical powers. The blade appears to be an exotic-looking dagger with a kris-like wavy blade ending in two small points. A small portion of a slimy, bright-red living salamander's tongue is somehow embedded in the heart of the blade, near the grip. It pulses and writhes randomly without intervention from the owner. 
+
+The exact origins of the blade are unknown, but it is believed that the first owner of the weapon was a respected and feared gnomish thief and assassin from Westgate named Turlam Shallowhill. Turlam was killed in a fight with a rival, a halfling called Deder Seven Fingers. Deder kept the weapon as a trophy, not knowing its powers until after it was stolen by an underling, a fellow halfling named Kreshinal Blackhound. Kreshinal fled to Selgaunt with the dagger for five years, relying on its powers to hide him from divination. Kreshinal lost the dagger in a botched gambling scam and was killed by Deder's agents within the month. Deder attempted to reclaim the dagger from the Sembian criminals who had captured it. He succeeded at routing the thieves and reclaiming his dagger, but he focused so much attention on the blade that he didn't notice that the Sembian criminals had employed a priest of Mask to infiltrate and break down his interests in Westgate. The ensuing war between the Westgate and Selgaunt factions ended when the priest of Mask, Pieter the Feeble, made the two sides so paranoid that they ate themselves away from the inside. Pieter grabbed the dagger when he had the opportunity and escaped to Hillsfar, confident that the unorganized demihuman supporters of the late Deder Seven Fingers wouldn't follow him to a place so hostile to their kind.
+
+In yet another scam, Pieter sold the blade to a Mulmaster Hawk while luring other potential buyers to an auction in Hillsfar. Pieter and his associates murdered the buyers at the fake auction and made off with the cash, hiding under the cover of an amulet of non-detection. The Mulmaster Hawk who purchased the blade was supposedly killed by priestesses of Umberlee who were angry at the assassin's refusal to pay tribute to the Bitch Queen. Years of factional fighting between the Umberlants are believed to have transported the blade as much as three thousand miles away from its humble beginnings in Sembia. The whereabouts of Pieter the Feeble and his goons are currently unknown.
+
+STATISTICS:
+
+Equipped abilities:
+– Increases backstab multiplier by 1
+– Non-detection
+
+Combat abilities:
+– Burning Toxin: Inflicts the target with a poison that deals 1d3 fire and 1d3 poison damage each round for 2 turns on failed Save vs. Death at -3
+
+THAC0: +3
+Damage: 1d4+3 (piercing)
+Speed Factor: 0
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+
+COPY_EXISTING ~TURODAH.ITM~ ~OVERRIDE~
+SAY NAME2 ~Turodahel +2~
+SAY DESC ~Crafted in 1021 DR for the warrior Makael the Lean, Turodahel has a bloody military history. Makael was a mercenary who sold his services to anyone with the right amount of coin. Shrewd and crafty by reputation, Makael applied his skills and the power of Turodahel carefully for over three decades. It wasn't until after Makael died of a magical disease that legends about the man started to spring up. It is believed by modern sages that Makael is likely to have killed over five hundred men with his sword over the years. It was widely known that Makael was neither especially strong nor tough. People assumed that it must have been the power of the sword that made his deeds possible. Makael's grave was robbed within a few years of his burial.
+
+For the next few decades, warriors and thieves from all over the Moonsea and Dalelands schemed and murdered to get hold of Makael's legendary sword. One priest of Bane, curious about the sword's powers, stole Makael's skull for divination. When questioned about the magical abilities of the weapon, Makael's spirit answered from beyond the grave with one word, "turodahel." The Banite searched through his books for months before he discovered the origins of the word in a Netherese lexicon. Roughly translated, "turodahel" is a compound noun meaning "the power of discretion."
+
+STATISTICS:
+
+Combat abilities:
+– Deals 1d8 additional slashing damage to targets with less than 17 Intelligence
+
+Equipped abilities:
+– Intelligence: +1
+
+THAC0: +2
+Damage: 1d8+2 (slashing)
+Speed Factor: 3
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+ 17 Intelligence
+
+Weight: 5~
 
 COPY_EXISTING ~U1HAM2A.ITM~ ~OVERRIDE~
 SAY DESC ~Like others of its type, this war hammer is made entirely of steel, with a bone-crushing hammer mounted upon an eighteen-inch shaft. It has also been bestowed with a small number of magical properties, however, making it more effective in combat. 
