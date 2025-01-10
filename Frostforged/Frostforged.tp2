@@ -10,3 +10,9 @@ LANGUAGE ~English~
 
 BEGIN ~Frostforged: Item Rebalance Mod for IWD:EE~
 INCLUDE ~%MOD_FOLDER%/lib/items.tpa~
+
+BEGIN ~Frostforged: New and Restored Items for IWD:EE~
+INCLUDE ~%MOD_FOLDER%/lib/new_items1.tpa~
+
+BEGIN ~Frostforged: Key Ring~
+INCLUDE ~%MOD_FOLDER%/lib/new_items2.tpa~

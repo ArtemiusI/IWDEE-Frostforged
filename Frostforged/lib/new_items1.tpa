@@ -1,0 +1,27 @@
+COPY ~%MOD_FOLDER%/itm/new~ ~override~
+
+COPY_EXISTING ~C0FF-DT1.itm~ ~override~
+SAY NAME2 ~Fury of the Four Elements +3~
+SAY DESC ~This dart was crafted by the vremyonni, the male wizards of Rashemen. Rashemen is a land full of ancient and wise spirits bearing powerful magicks, four of which that embody the power of the seasons bestowed their power upon this magical dart, giving it an equal amount of power from four different elemental forces. The magic that empowers the dart also seems to be alive, allowing it to bond with its wielder and return to them when thrown, drawing some power from the struck target along with it.
+
+STATISTICS:
+
+Combat abilities:
+– Returns to the wielder's hand when thrown
+– Each hit deals 1d3 additional fire, cold, acid or electrical damage and drains 3% resistance to the corresponding damage type, transferring it to the wielder for one turn.
+
+THAC0: +3
+Damage: 1d3+3 (missile)
+Speed Factor: 1
+Proficiency Type: Dart
+Type: One-handed
+
+Weight: 0~
+
+COPY_EXISTING ~AR4005.are~ ~override~
+      LPF ADD_AREA_ITEM
+      INT_VAR
+        container_to_add_to = 15
+      STR_VAR
+        item_to_add = ~C0FF-DT1~
+      END

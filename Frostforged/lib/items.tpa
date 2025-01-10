@@ -284,6 +284,26 @@ Weight: 80~
 COPY_EXISTING ~GLORYS1.SPL~ ~OVERRIDE~
 LPF ALTER_EFFECT INT_VAR match_opcode = 318 parameter1 = 2 parameter2 = C0CURHP END
 
+COPY_EXISTING ~KAYCHAI.ITM~ ~OVERRIDE~
+SAY DESC ~This armor was worn by Kaylessa, weapons master of the Seldarine's Hand. Her prowess in archery only bested by her beauty, Kaylessa was devoted to honing the battle skills of any elf under her. If there were any heroes at the Battle of Seldarine's Hand, Kaylessa was one of them. She was a shining example of courage in the face of impending doom as she fearlessly led her people against orc and goblin hordes. Even after the fall of the Hand, her commitment to battle and her people remained strong in her. Her last wish was to die in glorious battle.
+
+STATISTICS:
+
+Equipped abilities:
+– Missile Resistance: +40%
+– Open Locks: -5%
+– Find Traps: -5%
+– Pick Pockets: -20%
+– Move Silently: -10%
+– Hide In Shadows: -10%
+– Spellcasting is not disabled
+
+Armor Class: 2 (-4 vs missile, 0 vs. slashing, 4 vs. crushing)
+Requires:
+ 8 Strength
+
+Weight: 15~
+
 COPY_EXISTING ~NAMJI.ITM~ ~OVERRIDE~
 SAY DESC ~A wizard from Thesk named Namji was the creator of this powerful robe. While it does not impart a host of magical resistances to the wearer, it is extremely useful for spellcasters who find themselves in dangerous situations often. Namji himself was a reckless battle wizard who delighted in hurling spells from the midst of the fray. He was feared for his use of Namji's Burning Hands, an adaptation of the common Burning Hands spell.
 
@@ -599,6 +619,19 @@ Equipped abilities:
 
 Weight: 4~
 
+// GLOVES
+
+COPY_EXISTING ~KAYGLOV.ITM~ ~OVERRIDE~
+SAY DESC ~Worn by Kaylessa, weapons master of the Seldarine's Hand. Her prowess in archery only bested by her beauty, Kaylessa was devoted to honing the battle skills of any elf under her. If there were any heroes at the Battle of Seldarine's Hand, Kaylessa was one of them. She was a shining example of courage in the face of impending doom as she fearlessly led her people against orc and goblin hordes. Even after the fall of the Hand, her commitment to battle and her people remained strong. Her last wish was to die in glorious battle.
+
+STATISTICS:
+
+Equipped abilities:
+– Dexterity: +2
+– Ranged Critical Hit Chance: +2
+
+Weight: 3~
+
 // HELMETS
 
 COPY_EXISTING ~HELMCT.ITM~ ~OVERRIDE~
@@ -696,6 +729,29 @@ STATISTICS:
 
 Equipped abilities:
 – Strength: +1 (+100 exceptional)
+
+Weight: 0~
+
+COPY_EXISTING ~JASPER.ITM~ ~OVERRIDE~
+SAY DESC ~A thick steel band set with quartz, this tough-looking ring was created and worn by the Cormyrean battle-mage Jasper Silverblood. Jasper was a stocky, gruff man who appeared more like a common laborer than a wizard, and he liked it that way. He used this particular weapon on rowdy, cocky soldiers when he was confident it wouldn't kill them. He went down in history as one of the strictest disciplinarians ever to have command over the Purple Dragons.
+
+STATISTICS:
+
+Equipped abilities:
+– Each melee attack made by the wearer has a 20% chance to cast Shocking Grasp as though a 5th level mage on the target. If the wearer is unarmed, the activation chance is doubled.
+
+Requires:
+14 Intelligence
+
+Weight: 0~
+
+COPY_EXISTING ~KAYRING.ITM~ ~OVERRIDE~
+SAY DESC ~This ring belonged to Kaylessa of the Seldarine's Hand. Her prowess in archery only bested by her beauty, Kaylessa was devoted to honing the battle skills of any elf under her. If there were any heroes at the Battle of Seldarine's Hand, Kaylessa was one of them. She was a shining example of courage in the face of impending doom as she fearlessly led her people against orc and goblin hordes. Even after the fall of the Hand, her commitment to battle and her people remained strong. Her last wish was to die in glorious battle.
+
+STATISTICS:
+
+Equipped abilities:
+– Angharradh's Blessing: Wearer gains +1 to Constitution, Charisma, and Luck bonus to skill rolls
 
 Weight: 0~
 
@@ -841,6 +897,26 @@ Requires:
  6 Strength
 
 Weight: 4~
+
+COPY_EXISTING ~BESS.ITM~ ~OVERRIDE~
+SAY DESC ~This fell weapon was crafted by a beautiful and cruel wizardess who worshipped the lady of misfortune, Beshaba. Her name was Redani, and she was known both for her powers as an enchanter and a seductress. The Love of Black Bess was always given to her favored consort at any particular time. Unknown to her lovers, she would place a Ring of Readiness on the mace, saving the matching ring for a special time. When she grew tired of her consorts, as she always did, she would give the matching ring to a new lover and send the young man out to kill her old paramour. The new lover would simply call upon the ring and the mace would fly to his hand. 
+
+Unfortunately, Redani was done in when she trusted the wrong man to kill her old lover. Gural of Chessenta, a well-disguised priest of Hoar, took it upon himself to gain vengeance for a man whose skull he had picked up by the side of a road. Unluckily for Redani, priests of Hoar will go to any length to avenge the dead, even if it means animating all of her dead lovers to tear her limb from limb.
+
+STATISTICS:
+
+Combat abilities:
+– 50% of all hits cause the target to lose 2 points of Luck and all Saving Throws for the next round
+
+THAC0: +1, +4 vs. male
+Damage: 1d6+2, +5 vs. male (crushing)
+Speed Factor: 5
+Proficiency Type: Mace
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 7~
 
 COPY_EXISTING ~BIRON.ITM~ ~OVERRIDE~
 SAY DESC ~A weapon of grim reputation in the Frozen North, Blood Iron was crafted by a wicked barbarian shaman named Hekedder. He gave the sword to a cousin as a gift. The weapon saw a good amount of use in various barbarian hands as the years went by. Eventually, each owner found themselves hated for having the weapon in their possession. The taint of necromancy is so deplored by the northern tribes that the cursed name of Blood Iron became common knowledge among them. To this day, barbarians will not touch the cursed weapon and dislike even speaking of it. It is crafted of crude, poorly worked iron, and the surface of the blade is covered in gouge marks and the imprint of bad hammer strikes. The grip is wrapped in bright red leather.
@@ -1295,6 +1371,29 @@ Proficiency Type: Long Sword
 Type: One-handed
 Requires:
  6 Strength
+
+Weight: 3~
+
+COPY_EXISTING ~KAYBOW.ITM~ ~OVERRIDE~
+SAY DESC ~This bow belonged to Kaylessa, weapons master of the Seldarine's Hand. Her prowess in archery only bested by her beauty, Kaylessa was devoted to honing the battle skills of any elf under her. If there were any heroes at the Battle of Seldarine's Hand, Kaylessa was one of them. She was a shining example of courage in the face of impending doom as she fearlessly led her people against orc and goblin hordes. Even after the fall of the Hand, her commitment to battle and her people remained strong. Her last wish was to die in glorious battle.
+
+Perhaps due to the influence of the shadowed state of its wielder, the bow is capable of creating its own incorporeal arrows even if the wielder does not nock any of their own, with phantom arrows manifesting in the wielder's hand spontaneously when the string is drawn.
+
+STATISTICS:
+
+Combat abilities:
+– When no arrows are equipped, the bow fires phantom arrows that are treated as +3 for the purposes of determining what enemies they can damage.
+
+Equipped abilities:
+– Movement Rate: +40%
+
+THAC0: +3
+Damage: +3
+Speed Factor: 7
+Proficiency Type: Longbow
+Type: Two-handed
+Requires:
+ 15 Strength
 
 Weight: 3~
 

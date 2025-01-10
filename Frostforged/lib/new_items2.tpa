@@ -1,0 +1,21 @@
+COPY ~%MOD_FOLDER%/itm/containers~ ~override~
+
+COPY_EXISTING ~bdkeyr.itm~ ~override~
+SAY NAME1 ~Key Ring~
+SAY NAME2 ~Key Ring~
+SAY UNIDENTIFIED_DESC ~A latch on this heavy steel ring allows it to open on a hinge. Dozens of keys may be threaded on the ring to keep them organized.
+
+STATISTICS:
+
+Weight: 0~
+SAY DESC ~A latch on this heavy steel ring allows it to open on a hinge. Dozens of keys may be threaded on the ring to keep them organized.
+
+STATISTICS:
+
+Weight: 0~
+
+COPY_EXISTING ~bdkeyr.sto~ ~override~
+SAY 0xc ~Key Ring~
+
+COPY_EXISTING ~kugerth.sto~ ~override~
+ADD_STORE_ITEM ~bdkeyr~ #0 #0 #0 ~IDENTIFIED~ #1
