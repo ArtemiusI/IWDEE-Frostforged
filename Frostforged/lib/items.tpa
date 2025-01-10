@@ -374,6 +374,35 @@ LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Combat Casting~) STR_
 COPY_EXISTING ~NAMJI1.SPL~ ~OVERRIDE~
 LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0ek1ic END
 
+COPY_EXISTING ~OGI.ITM~ ~OVERRIDE~
+SAY DESC ~This robe was fashioned from strong fabric and dyed dark blue, the favorite color of its proud owner, the archmage Ogi-Luc. A Sembian by birth, Ogi-Luc was a powerful man, as strong in body as he was in mind. However, Ogi-Luc wasn't content to merely be strong. He wanted to be exceptionally strong. When he put on these robes, proud men stood aside and braggarts stilled their tongues. For all of Ogi-Luc's pride and prowess, he was unable to defeat the Red Wizard abjurer Nesk Vhaltim. Nesk took the robes as a prize. They were later stolen and sold by a daring rogue.
+
+STATISTICS:
+
+Charge abilities:
+– Enrage once per rest
+
+Equipped abilities:
+– Armor Class: 4
+– Strength: 18/99
+– Physical Damage Resistance: +10%
+
+Weight: 5~
+
+COPY_EXISTING ~OGIEN.ITM~ ~OVERRIDE~
+SAY DESC ~The great barbarian hero Ogien wore this armor during his many legendary conquests. Ogien was said to be a bear of a man, taller than his fellow barbarians and a good deal wider. It is said by some of the barbarians that Ogien would wrestle with wolves for amusement, and it is known that he was haunted by a prophecy that he would die "under white paws." When he was killed fighting polar bears on the tundra of Icewind Dale, his armor was buried with him. Despite its power, it is not distinctive in its appearance.
+
+STATISTICS:
+
+Charge abilities:
+– Barbarian Rage twice per rest
+
+Armor Class: 2 (1 vs. slashing, 4 vs. crushing)
+Requires:
+ 8 Strength
+
+Weight: 25~
+
 COPY_EXISTING ~PLATBLK.ITM~ ~OVERRIDE~
 SAY NAME2 ~Kresselack's Armor~
 SAY DESC ~This dark and heavy suit of plate mail armor was looted from the crypt of the ancient warlord Kresselack. Its grisly design and perpetual bloodstains make it as intimidating as its reinforced metal platings are protective, and it is little wonder that the armor's late wearer was seemingly invincible thoughout his brutal path of conquest in life. Whether a part of its original enchantments or a dark blessing bestowed upon it by the power of undead, the armor seems to sap the life force of those foolish enough to attack its wearer, allowing them to outlast even a squadron of weaker opponents.
@@ -1948,6 +1977,24 @@ Requires:
  17 Strength
 
 Weight: 16~
+
+COPY_EXISTING ~LOVER.ITM~ ~OVERRIDE~
+SAY DESC ~Fehll Brownbriars was a half-elven thief of notoriety in Waterdeep. His list of conquests, both romantic and larcenous, was too long for even bards to recite. The dagger he kept at his side was decorated with a ruby heart, and it became coveted by a small group of rivals in the great city. Fehll was eventually murdered at the hands of a seductress so clever that not even the prescient half-elf could see her malicious intent. The woman, Prespera of Orlumbor, sold the dagger for a hefty sum and disappeared into obscurity.
+
+STATISTICS:
+
+Combat abilities:
+– Armor Penetrating: deals 2 additional points of unmitigated piercing damage
+
+THAC0: +4
+Damage: 1d4+2 (piercing)
+Speed Factor: 1
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
 
 COPY_EXISTING ~LSHAND.ITM~ ~OVERRIDE~
 SAY DESC ~Made during the golden age between the elves of the Seldarine's Hand and the dwarves of Dorn's Deep. The swordsmen of the Seldarine's Hand wielded this weapon with pride, as it was a symbol of strength and unity between the two races.
