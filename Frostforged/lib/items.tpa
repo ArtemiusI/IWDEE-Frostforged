@@ -881,6 +881,33 @@ Equipped abilities:
 
 Weight: 0~
 
+COPY_EXISTING ~RING21.ITM~ ~OVERRIDE~
+SAY NAME2 ~Ring of Evasion~
+SAY DESC ~This ring continually grants the wearer extreme nimbleness, allowing them to avoid damage as if they had the evasion ability.
+
+These rings have been used as training tools among the Red Wizards in an effort to lower the mortality rate among apprentice battle mages.
+
+STATISTICS:
+
+Equipped abilities:
+– Evasion: When the wearer is hit by a spell that can be evaded (Fireball, Lightning Bolt, etc.), they are allowed a Save vs. Breath to completely avoid the effects. If the Saving Throw is failed, the spell works normally, including a save for half damage if the spell allows for it. A helpless wearer (e.g. held, stunned, or asleep) cannot use Evasion.
+
+Weight: 0~
+
+COPY_EXISTING ~SHADOWS.ITM~ ~OVERRIDE~
+SAY DESC ~Priests of Mask made this plain silver ring in order to help their more generous worshippers. In return, the thieves who borrowed the ring gave a portion of their earnings to churches of Mask. The ring left the church's ownership when an ungrateful thief named Jennick decided to run away with the prized item. The church of Mask hired assassins to hunt down the man and kill him, but he was never captured. It is believed that Jennick retired in Waterdeep and lived out the rest of his days in peace.
+
+STATISTICS:
+
+Charge abilities:
+– Shadowstep once per day
+
+Equipped abilities:
+– Hide In Shadows: +15%
+– Non-detectable by magical means such as Detect Invisibility and scrying
+
+Weight: 0~
+
 // SHIELDS
 
 COPY_EXISTING ~ARGENT.ITM~ ~OVERRIDE~
