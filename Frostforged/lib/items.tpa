@@ -429,6 +429,19 @@ Requires:
 
 Weight: 20~
 
+COPY_EXISTING ~UROBE1A.ITM~ ~OVERRIDE~
+SAY DESC ~Since the age of Netheril, mages have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a mage. Due to their magical heritage, however, only single-, dual-, and multi-class mages may wear these enchanted robes.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2
+– Casting Level (Arcane): +1
+– Spell Duration (Arcane): +15%
+– All fire, cold, electrical, acid and magic damage inflicted by the character is increased by 10%
+
+Weight: 4~
+
 // BELTS
 
 COPY_EXISTING ~BELTBON.ITM~ ~OVERRIDE~
@@ -970,6 +983,32 @@ Equipped abilities:
 
 Weight: 0~
 
+COPY_EXISTING ~RINGELF.ITM~ ~OVERRIDE~
+SAY DESC ~Upon cursory examination, this ring appears to be made of ivory. Study reveals that the thick band is actually made of well-tooled elf bone. It bears the repeating angular geometric patterns that the long-dead craftsmen of Myth Lharast were known for. Considered plain by modern elven standards, the ring was a gift to Kiran-Hai, Circle Singer of Angharradh and Ward Mistress of the Arboreal Tombs in Myth Lahl. The name of its creator has been lost. It is believed to have been stolen from the Arboreal Tombs some time after Myth Lharast fell.
+
+STATISTICS:
+
+Equipped abilities:
+– Save vs. Death and Necromancy: +4
+– Regenerate 1 hit point per round
+
+Weight: 0~
+
+COPY_EXISTING ~RINGKON.ITM~ ~OVERRIDE~
+SAY DESC ~Kontik, a powerful wizard in the service of Auril, claimed this ring from a defeated enemy wizard, Nill the Infernal. An archmage who specialized in fire magic, Nill created the ring over a period of five years. The powerful item aided Nill in his far-ranging travels. Unfortunately for Nill, it did not protect him from Kontik's powerful minions and spells. It is constructed of an extremely unusual grayish-white metal called tungsten.
+
+STATISTICS:
+
+Equipped abilities:
+– Can cast double the number of 1st- and 2nd-level wizard spells
+
+Combat abilities:
+– Casting Speed: +2
+– Spell Duration (Arcane): -30% penalty
+– All cold damage inflicted by the character is increased by 20%, but all fire, acid, electrical and magic damage is reduced by 20%
+
+Weight: 0~
+
 COPY_EXISTING ~SHADOWS.ITM~ ~OVERRIDE~
 SAY DESC ~Priests of Mask made this plain silver ring in order to help their more generous worshippers. In return, the thieves who borrowed the ring gave a portion of their earnings to churches of Mask. The ring left the church's ownership when an ungrateful thief named Jennick decided to run away with the prized item. The church of Mask hired assassins to hunt down the man and kill him, but he was never captured. It is believed that Jennick retired in Waterdeep and lived out the rest of his days in peace.
 
@@ -1146,6 +1185,20 @@ Requires:
  15 Intelligence
 
 Weight: 4~
+
+COPY_EXISTING ~SHSHLD.ITM~ ~OVERRIDE~
+SAY DESC ~Made during the golden age between the elves of the Seldarine's Hand and the dwarves of Dorn's Deep. Etched with elven runes across its face, this shield was made from some of the strongest metals to ever come from Dorn's Deep. Any bearer of this shield is confident in the fact that this shield will deflect any blow brought upon it.
+
+STATISTICS:
+
+Equipped abilities:
+– Save vs. Spells: +3
+
+Armor Class: +3, an extra +1 vs. missile attacks
+Requires:
+ 15 Strength
+
+Weight: 8~
 
 COPY_EXISTING ~STOUT.ITM~ ~OVERRIDE~
 SAY DESC ~This small shield was created as a gift from the leader of Clan Battlehammer to one of his trusted servants. The servant, Wurdar Stoutbrew, protected the clan leader's family from being killed and eaten by yeti. Wurdar wore the shield proudly for ten years before he was killed by orcs in the Spine of the World. His sacrifice allowed a few key members of the Battlehammer clan to escape to safety.
@@ -2087,6 +2140,90 @@ Requires:
 
 Weight: 0~
 
+COPY_EXISTING ~QUOST.ITM~ ~OVERRIDE~
+SAY DESC ~The wizard Quost Curion was the creator of this staff. He was a mercenary mage who loved summoning allies to dole out punishment against his enemies. Often, however, he found that he was running out of spells at a time when he needed them the most. At great personal expense, Quost created this staff over a period of seven years. His staff was very effective until he went into battle with an abjurer who was prepared to deal with his summoned monsters. Quost was killed in battle in 1063, and his staff was claimed by his killer, Balder Renold.
+
+STATISTICS:
+
+Charge abilities:
+– Elemental Summoning once per day
+  Range: 20 ft.
+  Duration: 1 turn
+
+Combat abilities:
+– Banishes elementals on hit unless a Save vs. Spells at -4 is made
+– Deals 1 fire, cold, electrical and acid damage on hit
+
+THAC0: +4
+Damage: 1d6 (crushing)
+Speed Factor: 1
+Proficiency Type: Quarterstaff
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 3~
+
+COPY_EXISTING ~REDEMPT.ITM~ ~OVERRIDE~
+SAY DESC ~This war hammer was enchanted by the church of Torm to return charmed wayward combatants to their standard allegiance. High priests of Torm typically held the hammer in battle, keeping an eye out for anyone who might be swayed to attack his or her comrades through magic. Redemption was lost when the last high priest to hold the weapon, Ardo Meller, was killed in the Battle of Black Lawns, 1230 DR. It is believed that agents of the draconic god Tchazzar dragged the weapon from the scene.
+
+STATISTICS:
+
+Equipped abilities:
+– When striking an ally, cast Exaltation and Cure Critical Wounds on them
+
+THAC0: +4
+Damage: 1d4+5 (crushing)
+Speed Factor: 1
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
+
+Weight: 6~
+
+COPY_EXISTING ~RELIAN.ITM~ ~OVERRIDE~
+SAY DESC ~The halfling warrior Ket Stillpond was known as an upright man who kept his wits about him at all times. Bards sing about the various near-death experiences he escaped from in the simple, if long-winded, tune, "The One Hundred Lives of Ket the Keen." He was also known for two of the weapons he carried. One was his short sword, Bloodfarmer. The other was his dagger, Reliance. It is said that Ket kept this dagger on his person for all of his days, never turning it over to any man, nor keeping it out of arm's reach at any time. He was actually kicked out of the Cormyrean royal court for his stubborn insistence on keeping Reliance, unbound, by his side. After he died, Ket's extremely large family decided to donate the dagger to the church of Arvoreen. The church later gave it to a promising young halfling warrior. The warrior was killed later when he turned over the dagger upon entering a seemingly friendly camp. His hosts turned out to be a pack of bandits. They killed the poor halfling on the spot.
+
+STATISTICS:
+
+Combat abilities:
+– This weapon always deals maximum damage on damage rolls
+– This weapon can never critically miss
+
+THAC0: +4
+Damage: 1d4+4 (piercing)
+Speed Factor: 1
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+
+COPY_EXISTING ~SBOWEBU.ITM~ ~OVERRIDE~
+SAY DESC ~This slender bow radiates an intense amount of heat, yet it seems cold to the touch, as if it were draining energy from the user's body. An aging necromancer from Bryn Shander enchanted it, after his lava-mephit familiar was slain by an Aurilite high priest. The bow was then given to an assassin for hire, Teraven Docen, who was quite successful in bringing down many of the ice-maiden's children over a three-year period of bounty hunting. The assassin met his match, however, when attempting to ambush a traveling gnome who carried a wand of fireballs. Only the bow survived the repeated immolations.
+
+STATISTICS:
+
+Equipped abilities:
+– Constitution: -2
+– Fire Resistance: -50%
+– Cold Resistance: +30%
+
+Combat abilities:
+– When no arrows are equipped, the bow fires firebolts that are treated as +3 for the purposes of determining what enemies they can damage. The firebolts explode upon impact, dealing 2d3 fire damage to all enemies in a small area around the target. Up to 90 firebolts may be fired in one day before needing to recharge. If other arrows are fired by this bow, they do not explode.
+– 3 attacks per round
+
+THAC0: +3
+Damage: +3
+Speed Factor: 2
+Proficiency Type: Shortbow
+Requires:
+ 6 Strength
+
+Weight: 3~
+
 COPY_EXISTING ~SERRATE.ITM~ ~OVERRIDE~
 SAY DESC ~Emanating a faint blue aura, this gigantic weapon is a serrated two-handed sword made of bone. It will occasionally strike with a shocking force of cold, chilling the victim to the bone.
 
@@ -2210,6 +2347,66 @@ Requires:
 
 Weight: 0~
 
+COPY_EXISTING ~SPENSTAF.ITM~ ~OVERRIDE~
+SAY DESC ~The wizard Spendelard was famous for his extremely utilitarian spells. While he was not threatened a great deal during his life, his rare but far-reaching travels often took him into dangerous situations. A staff of his making protected him on those occasions. He eventually acquired a staff that he found more to his liking and sold his worn Protector to a traveling druid of Chauntea.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2
+– Can cast double the number of 1st-level wizard spells
+
+THAC0: +1
+Damage: 1d6+1 (crushing)
+Speed Factor: 3
+Proficiency Type: Quarterstaff
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 3~
+
+COPY_EXISTING ~SPINE.ITM~ ~OVERRIDE~
+	WRITE_SHORT 0x001c	~%mage_dagger%~
+SAY DESC ~The ghastly name of this weapon is taken from its first owner's fondness for burying it in the backs of his enemies. The long stiletto blade was designed specifically to punch through armor. The assassin Beledor of Calimport used this weapon to kill dozens of people before he succumbed to the poison of an easily bribed servant.
+
+STATISTICS:
+
+Equipped abilities:
+– Increases backstab multiplier by 2
+– This weapon may not be wielded in the off-hand
+
+THAC0: +5
+Damage: 1d4+1 (piercing)
+Speed Factor: 1
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 4 Strength
+
+Weight: 1~
+
+COPY_EXISTING ~STAFHMG.ITM~ ~OVERRIDE~
+SAY DESC ~This grim staff, of a most despicable repute, was originally carved from the wood of Dead Man's Tree: an ancient black willow that stood on the outskirts of a forgotten hamlet of the Moonshae's, from which criminals were hung. All manner of bandits, murderers, rapists, and other worthies were left dangling from its knotty limbs; and all to the delight of the gravedigger Mordigan. For Mordigan, a secret practitioner of the necromantic arts, saw ample opportunity in which to ply his trade. Interring the remains of the evil men within close proximity of the tree, Mordigan called upon the dark powers of the negative material to perform a baleful act upon the black willow. It was given a sort of semi-sentience, and the ability to feed upon the remains of those who had so recently swung from its branches. Black roots descended into rotting flesh; and alarmingly enough, the tortured visages of the slain began to appear in the twisted knots of the black willow's bole before its burning. But, to the surprise of the villagers, the potently ensorcelled staff carved by the hands of the evil Mordigan did indeed prove to be their undoing. And thus did the hanged men of Dead Man's Tree have their revenge.
+
+STATISTICS:
+
+Equipped abilities:
+– Charisma: -2
+
+Combat abilities:
+– Every round while in combat, there is a 40% chance to spawn a weak undead creature by the wielder
+
+THAC0: +1
+Damage: 1d6+1 (crushing)
+Speed Factor: 4
+Proficiency Type: Quarterstaff
+Type: Two-handed
+Requires:
+ 5 Strength
+
+Weight: 2~
+
 COPY_EXISTING ~STORM.ITM~ ~OVERRIDE~
 SAY NAME2 ~Storm Bow +3~
 SAY DESC ~This weapon is holy to warriors in the service of Talos, god of storms and destruction, and has seen decades of use in their capable hands. A shortbow made of many composite layers of wood, the Storm Bow has been used against the myriad enemies of the church of Talos. Most recently, the bow was in the possession of a Storm Knight named Kalassan Brevered, who was killed after striking down a number of rangers and druids on the Moonshae Isles.
@@ -2286,6 +2483,25 @@ Requires:
  6 Strength
 
 Weight: 4~
+
+COPY_EXISTING ~TOMB.ITM~ ~OVERRIDE~
+SAY DESC ~The quick-witted warrior Seldon Mirai was known for his cool demeanor and his lighthearted comments in the midst of trying circumstances. He was especially well known for his lack of fear of the undead. He considered undead to be, in his words, "unoriginal, tired old jokes." "After the hundredth skeleton," he would say, "what's to be afraid of? They all march at you like horses to water, and you just hack them down one at a time. I'm supposed to be scared of that?" He would wade into tombs with his trusted flail and smash apart any undead that he found, joking all the way. Eventually, Seldon's lack of respect for the necromantic arts earned him an enemy in the form of Tiron, a lich of no small power. Tiron captured Seldon and paralyzed him, letting a group of skeletons beat him to death. Seldon's friends later recovered his body and had him raised from the dead. He was not as lighthearted about the walking dead after that.
+
+STATISTICS:
+
+Combat abilities:
+– Instantly kills skeletons, zombies and ghouls on hit
+
+THAC0: +3
+Damage: 1d6+1, +6 vs. undead
+Damage type: crushing
+Speed Factor: 3
+Proficiency Type: Flail/Morning Star
+Type: One-handed
+Requires:
+ 13 Strength
+
+Weight: 5~
 
 COPY_EXISTING ~TONGUE.ITM~ ~OVERRIDE~
 SAY DESC ~A wicked-looking dagger with a dark history, the Salamander's Tongue is prized both for its use as a weapon and its hidden magical powers. The blade appears to be an exotic-looking dagger with a kris-like wavy blade ending in two small points. A small portion of a slimy, bright-red living salamander's tongue is somehow embedded in the heart of the blade, near the grip. It pulses and writhes randomly without intervention from the owner. 
