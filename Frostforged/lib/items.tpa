@@ -321,6 +321,20 @@ Requires:
 
 Weight: 15~
 
+COPY_EXISTING ~MAILLIF.ITM~ ~OVERRIDE~
+SAY DESC ~This armor was crafted from meteoric iron by dwarven and elven smiths during the Time of Cooperation. A high priest of Moradin and a high priest of Labelas Enoreth enchanted the armor with its powers. Unfortunately, no elven or dwarven warrior ever wore the chain mail. When troubles arose between the Hand of the Seldarine and Dorn's Deep, the dwarves locked the armor in a vault, refusing to use anything the elves had a hand in creating.
+
+STATISTICS:
+
+Equipped abilities:
+– Preservation: The wearer regenerates one hit point per 4 rounds. The regeneration rate increases to 1 hit point per round when below 50% of the wearer's maximum hit points, and 3 hit points per round when below 25%.
+
+Armor Class: 2 (0 vs. slashing, 4 vs. crushing)
+Requires:
+ 8 Strength
+
+Weight: 40~
+
 COPY_EXISTING ~MOURNER.ITM~ ~OVERRIDE~
 SAY DESC ~This unique suit of armor is of foreign design, created for a Kara-Turan samurai from the Baika Clan. The armor, crafted from thin, stiff leather, is dyed black but features the insignia of the plum blossom, the mon of the Baika Clan. It was only worn into battle once, when Baika Himuro fought a hopeless battle against the enemy samurai that flooded into his ancestral estate. It is believed that the enemy clan captured the armor and later traded it for siege equipment.
 
@@ -584,6 +598,16 @@ Equipped abilities:
 
 Weight: 4~
 
+COPY_EXISTING ~STOMPER.ITM~ ~OVERRIDE~
+SAY DESC ~This pair of extremely sturdy boots were owned by the Thentian explorer Bordel "Stomper" Farpath. Bordel was famed throughout the Moonsea for his hiking contests. Bordel and a group of fellow explorers would specify a location in Faerûn to march to. The contestants would then hike to the location by the quickest route possible. Bordel won far more of the competitions than he lost, and he had a reputation for having extremely heavy footsteps. This earned him the nickname "Stomper." When Bordel died in a rockslide, he was buried in the wilderness. Several years after his death, rumors began circulating that Bordel's boots were actually enchanted to make him sound loud when he approached. This rumor spiraled out of control, eventually going so far as to say that Bordel's boots were capable of shaking down houses with their weight. By the time thieves stole the boots ten years after Bordel's death, they had taken on the properties that so many people believed they possessed.
+
+STATISTICS:
+
+Equipped abilities:
+– Knockdown: When the wearer is moving, they have a 10% chance to knock enemies within a 15-ft. radius prone for the next round on a failed Save vs. Breath at -5, rendering them unable to act and reducing their Armor Class vs. melee attacks by 4, but increasing their Armor Class vs. ranged attacks by 4. This has no effect on larger creatures.
+
+Weight: 4~
+
 // CLOAKS
 
 COPY_EXISTING ~CDWUFF.ITM~ ~OVERRIDE~
@@ -732,7 +756,7 @@ Equipped abilities:
 
 Combat abilities:
 – All crushing damage inflicted by the character is increased by 15%
-– Knockdown: Each unarmed attack has a 50% chance to knock the target prone for the next round on a failed Save vs. Death at -3, rendering them unable to act and reducing their Armor Class vs. melee attacks by 4, but increasing their Armor Class vs. ranged attacks by 4. This has no effect on larger creatures.
+– Knockdown: Each unarmed attack has a 50% chance to knock the target prone for the next round on a failed Save vs. Breath at -3, rendering them unable to act and reducing their Armor Class vs. melee attacks by 4, but increasing their Armor Class vs. ranged attacks by 4. This has no effect on larger creatures.
 
 Weight: 2~
 
@@ -774,6 +798,47 @@ Requires:
 
 Weight: 5~
 
+COPY_EXISTING ~HELMDED.ITM~ ~OVERRIDE~
+SAY DESC ~These ancient helms were once common among the Reghedmen barbarians who came to what is now known as Icewind Dale. The design of the armor is relatively simple: a plain iron helm with a hinged faceplate. Once the basic construction of the helm had been finished, craftsmen would tool the image of a dead warrior onto the faceplate. The name of the warrior and a one-word description of his death were carved into the forehead of the mask. The helm was then left in the dead warrior's funeral pyre. The priests believed that the mask would hide the dead man's fear of the afterlife when he was judged by Tempos. After a month had passed, the helms of particularly valiant warriors were recovered by the priests. Over the next few years, the priests praised the valiant warriors by name in their daily rituals. According to legend, if Tempos found the warrior to be truly valiant, the helm would gain the power to make the wearer immune to fear. This particular helm bears the ancient name "Siglef" and the word "Axe."
+
+STATISTICS:
+
+Combat abilities:
+– Face of Fear: The wearer passively reduces the morale of enemies within visual range by 2 points
+
+Equipped abilities:
+– Slashing and Crushing Resistance: +5%
+– Charisma: -2
+– Immunity to fear and morale failure
+– Protects against critical hits
+
+Weight: 3~
+
+COPY_EXISTING ~HELMDEF.ITM~ ~OVERRIDE~
+SAY DESC ~This helmet was worn for four hundred years by halflings and gnomes in the small and virtually unknown community called Shepherd's Valley. Each dawn, the Night Watch captain would hand the helmet over to the Day Watch captain. Each dusk, the Day Watch captain returned the helm. This cycle continued without fail until Pheldon Tock, a Night Watch captain, decided to trade in the helm for another. The helmet probably would have remained in Gibling Armstrong's Curious Armor Shoppe for quite some time if a bored dwarf hadn't bought it and set it on his mantle in distant lands.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+– Fortitude: The wielder is healed for one hit point each time they take damage.
+– Immunity to sleep and fatigue
+– Protects against critical hits
+
+Weight: 2~
+
+COPY_EXISTING ~HELMHUN.ITM~ ~OVERRIDE~
+SAY DESC ~This helm was worn by the great elven hunter Illian Willowdusk. It was constructed by a group of well-intentioned halflings when Illian hunted down and killed a priest of Malar and his bloodthirsty trained animals, who had been plaguing the halfling shire. The helm served Illian well until he went hunting a great stag on Cinnaelos'Cor, an elven holiday. When the stag leapt into a thick patch of vines and briars, Illian followed. As Illian leapt through the tangle, the huge horns of the helm became caught, jerking his head violently. He was found dead the next day with a broken neck.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +2
+– Luck: +1 (bonus to all rolls)
+– Protects against critical hits
+
+Weight: 3~
+
 COPY_EXISTING ~HELMLA.ITM~ ~OVERRIDE~
 SAY DESC ~This well-crafted helmet has a short history. A priestess of Lathander named Iraeni of Suzail had it constructed for the champion of her church, a warrior named Beldan Miller. Beldan employed the helm frequently, as Iraeni was often attacked by agents of Myrkul. After twenty years of serving Lathander, Iraeni decided to step down from her office, as did Beldan. They were married shortly after. Beldan gave the helm to an errant paladin of Lathander, who is believed to have died fighting a lich near the Battle of the Bones.
 
@@ -803,6 +868,17 @@ Equipped abilities:
 – Armor Class: +2, +4 for dwarves
 
 Weight: 4~
+
+COPY_EXISTING ~HELMSUN.ITM~ ~OVERRIDE~
+SAY DESC ~This wreath of laurel leaves and roses was a gift from the church of Sune to the priestesses of Hanali Celanil at the Hand of the Seldarine. The representatives of the human goddess of love and beauty were well received, and the high priestess of Hanali Celanil wore the laurel whenever humans were visiting the Hand. The orcs discarded the laurel as useless trash when they sacked the priests' tower.
+
+STATISTICS:
+
+Equipped abilities:
+– Charisma: +3
+– Saving Throws: +2
+
+Weight: 1~
 
 // MISCELLANEOUS
 
@@ -905,6 +981,34 @@ Charge abilities:
 Equipped abilities:
 – Hide In Shadows: +15%
 – Non-detectable by magical means such as Detect Invisibility and scrying
+
+Weight: 0~
+
+COPY_EXISTING ~ULRING.ITM~ ~OVERRIDE~
+SAY DESC ~A stout gold ring set with a black opal, this Ulcaster Academy ring bears the Netherese phrase "GOTHA E ETAN MEDR—ETACC," or "LIFE AND DEATH ETERNAL—NECROMANCY." A date on the side of the ring reads "1072 DR."
+
+The Ulcaster Academy was a school of wizards who practiced, learned, and taught magic near the town of Beregost on the Sword Coast. Ulcaster's school eventually became frighteningly powerful. A group of wizards descended on the academy and reduced it to ruin. Most of the students and teachers were killed. Ulcaster's fate is unknown. Those few Ulcaster residents who escaped are known to pass on their class rings to private students, continuing their particular brand of education with pride.
+
+STATISTICS:
+
+Equipped abilities:
+– May cast one additional spell of 1st- to 4th- level
+
+Charge abilities:
+– Vampiric Touch three times per day
+  Drains 5d6 Hit Points from the target and adds them to the wearer's total for 1 hour
+  Range: Touch
+  Area of Effect: 1 creature
+
+– Skull Trap three times per day
+  Deals 10d6 Hit Points in damage (save vs. Breath for half)
+  Range: 55 ft.
+  Area of Effect: 15-ft. radius
+
+– Finger of Death once per day
+  Instantly kills target on failed Save vs. Spell. If target makes save, deal 2d8+1 damage
+  Range: Visual range
+  Area of Effect: 1 creature
 
 Weight: 0~
 
@@ -1260,7 +1364,7 @@ SAY DESC ~Named for its ability to lay warriors low, the Cairn Blade was used by
 STATISTICS:
 
 Combat abilities:
-– Knockdown: Each attack has a 50% chance to knock the target prone for the next round on a failed Save vs. Death at -3, rendering them unable to act and reducing their Armor Class vs. melee attacks by 4, but increasing their Armor Class vs. ranged attacks by 4. This has no effect on larger creatures.
+– Knockdown: Each attack has a 50% chance to knock the target prone for the next round on a failed Save vs. Breath at -3, rendering them unable to act and reducing their Armor Class vs. melee attacks by 4, but increasing their Armor Class vs. ranged attacks by 4. This has no effect on larger creatures.
 
 THAC0: +4
 Damage: 1d10+4 (slashing)
@@ -1682,6 +1786,24 @@ Requires:
 
 Weight: 10~
 
+COPY_EXISTING ~JAMISON.ITM~ ~OVERRIDE~
+SAY DESC ~A powerful gnomish hero, Harl Jamison, used this sling in his numerous battles with the ogres and goblins that infested his homeland. Jamison was the head of a famous band of gnomish adventurers called the Sons of Green Hills. The Sons are heroes to most gnomes and live on in various folk songs and legends. Jamison's sling was buried with him when he died of old age in 845 DR. It is believed that human thieves plundered his grave some years later, around 890 DR.
+
+STATISTICS:
+
+Combat abilities:
+– Attacks per round: +1/2
+
+THAC0: +4
+Damage: +2 (missile)
+Speed Factor: 2
+Proficiency Type: Sling
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 0~
+
 COPY_EXISTING ~JHOSWD2.ITM~ ~OVERRIDE~
 SAY DESC ~This once-shattered blade lay in the breast of Icasaracht, the last of the white dragon matriarchs that ruled the Spine of the World. It was wielded by Aihonen, a distant ancestor of Jhonen the fisherman in Easthaven—the sword has lain at the bottom of the lake for almost a century, waiting to be returned to one of its wielder's bloodline. How it has been restored to its original state is unknown, but whatever the reason, it looks like a powerful weapon that can help you free Easthaven from Brother Poquelin. 
 
@@ -1965,6 +2087,24 @@ Requires:
 
 Weight: 0~
 
+COPY_EXISTING ~SERRATE.ITM~ ~OVERRIDE~
+SAY DESC ~Emanating a faint blue aura, this gigantic weapon is a serrated two-handed sword made of bone. It will occasionally strike with a shocking force of cold, chilling the victim to the bone.
+
+STATISTICS:
+
+Combat abilities:
+– Chill: 10% chance per hit to deal 1d10 additional cold damage and stun the target for two rounds on a failed Save vs. Death at -1
+
+THAC0: +3
+Damage: 1d10+3 (slashing)
+Speed Factor: 10
+Proficiency Type: Two-handed Sword
+Type: Two-handed
+Requires:
+ 14 Strength
+
+Weight: 25~
+
 COPY_EXISTING ~SHPLATE.ITM~ ~OVERRIDE~
 SAY DESC ~Made during the golden age between the elves of the Seldarine's Hand and the dwarves of Dorn's Deep. The craftsmanship of this short sword is of exceptional dwarven quality and is laden with elven runes across its glowing blade. There were swordsmen within the Seldarine's Hand who preferred the quickness and balance of a short sword. This was made to accommodate those swordsmen who preferred to deliver death through quickness and grace rather than brute strength.
 
@@ -2058,7 +2198,7 @@ SAY DESC ~The halfling warrior-rogue Edley Bramble was the owner of this fine we
 STATISTICS:
 
 Combat abilities:
-– Knockdown: Each attack has a 20% chance to knock the target prone for the next round on a failed Save vs. Death at -3, rendering them unable to act and reducing their Armor Class vs. melee attacks by 4, but increasing their Armor Class vs. ranged attacks by 4. This has no effect on larger creatures.
+– Knockdown: Each attack has a 20% chance to knock the target prone for the next round on a failed Save vs. Breath at -3, rendering them unable to act and reducing their Armor Class vs. melee attacks by 4, but increasing their Armor Class vs. ranged attacks by 4. This has no effect on larger creatures.
 
 THAC0: +3
 Damage: +2 (missile)
@@ -2106,6 +2246,24 @@ Proficiency Type: Club
 Type: One-handed
 Requires:
  17 Strength
+
+Weight: 4~
+
+COPY_EXISTING ~SW1H15.ITM~ ~OVERRIDE~
+SAY DESC ~The scimitar is closely related to the saber, a single-edged curved sword with protective hilt. The blade has a greater curve to it and is tapered to an elongated, sharp point. The origins of the scimitar are largely unknown; however, they have been very popular in the southern region of the realms. This is the magical scimitar +3 Frostbrand.
+
+STATISTICS:
+
+Equipped abilities:
+– Frostbrand: The wielder gains +50% Fire Resistance and deals 2 bonus magic cold damage on each hit
+
+THAC0: +3
+Damage: 1d8+3 (slashing)
+Proficiency Type: Scimitar/Wakizashi/Ninjatō
+Speed Factor: 2
+Type: One-handed
+Requires:
+ 8 Strength
 
 Weight: 4~
 
