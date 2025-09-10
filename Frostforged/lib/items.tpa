@@ -1,6 +1,17 @@
 COPY ~%MOD_FOLDER%/bam~ ~override~
 COPY ~%MOD_FOLDER%/itm~ ~override~
 
+// Writes a new item type into the itemtype.2da and returns the reference value.
+LAF ADD_ITEMTYPE_IN_2DA
+		INT_VAR
+			inventorySlotType 	= 35
+		STR_VAR
+			soundGrab		= EVAL ~GAM_29A~
+			soundDrop		= EVAL ~GAM_29B~
+		RET
+			mage_dagger 		= typeNumber
+END
+
 EXTEND_TOP ~baldur.bcs~ ~%MOD_FOLDER%/scripts/items.baf~
 
 DEFINE_ACTION_FUNCTION cd_new_portrait_icon
@@ -2211,7 +2222,7 @@ Requires:
 
 Weight: 3~
 
-COPY_EXISTING ~REDEMPT.ITM~ ~OVERRIDE~
+COPY_EXISTING ~REDEMT.ITM~ ~OVERRIDE~
 SAY DESC ~This war hammer was enchanted by the church of Torm to return charmed wayward combatants to their standard allegiance. High priests of Torm typically held the hammer in battle, keeping an eye out for anyone who might be swayed to attack his or her comrades through magic. Redemption was lost when the last high priest to hold the weapon, Ardo Meller, was killed in the Battle of Black Lawns, 1230 DR. It is believed that agents of the draconic god Tchazzar dragged the weapon from the scene.
 
 STATISTICS:
@@ -2871,17 +2882,6 @@ Requires:
  18 Strength
 
 Weight: 15~
-
-// Writes a new item type into the itemtype.2da and returns the reference value.
-LAF ADD_ITEMTYPE_IN_2DA
-		INT_VAR
-			inventorySlotType 	= 35
-		STR_VAR
-			soundGrab		= EVAL ~GAM_29A~
-			soundDrop		= EVAL ~GAM_29B~
-		RET
-			mage_dagger 		= typeNumber
-END
 
 COPY_EXISTING ~UDAGG2B.itm~ ~override~
 	WRITE_SHORT 0x001c	~%mage_dagger%~
