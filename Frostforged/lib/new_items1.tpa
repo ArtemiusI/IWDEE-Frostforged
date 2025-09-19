@@ -2,6 +2,60 @@ COPY ~%MOD_FOLDER%/itm/new~ ~override~
 
 EXTEND_TOP ~baldur.bcs~ ~%MOD_FOLDER%/scripts/items-new.baf~
 
+EXTEND_TOP ~kphermit.bcs~ ~%MOD_FOLDER%/scripts/kphermit.baf~
+
+COMPILE ~%MOD_FOLDER%/dlg/dialog.d~
+COMPILE ~%MOD_FOLDER%/scripts/C0FF-AXC.baf~
+
+COPY_EXISTING ~C0FF-AX1.itm~ ~override~
+SAY NAME2 ~Axe of Hrothgar +1~
+SAY DESC ~This axe was wielded by the hero Hrothgar, who was lost to the avalanche which slew most of the expedition on the way to Kuldahar. Though its enchantments are meager, its weathered appearance belies a long history of battles and adventures, and its edge is no less sharp than it has ever been.
+
+STATISTICS:
+
+Combat abilities:
+– Keen: +5% bonus to Critical Hit Chance
+
+THAC0: +1
+Damage: 1d8+2 (slashing)
+Speed Factor: 4
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 5~
+
+COPY_EXISTING ~HROTH.CRE~ ~OVERRIDE~
+  ADD_CRE_ITEM ~C0FF-AX1~ #1 #1 #1 ~IDENTIFIED~ ~weapon1~
+
+COPY_EXISTING ~HROTH1.CRE~ ~OVERRIDE~
+  ADD_CRE_ITEM ~C0FF-AX1~ #1 #1 #1 ~IDENTIFIED~ ~weapon1~
+
+COPY_EXISTING ~C0FF-AX2.itm~ ~override~
+SAY NAME2 ~Axe of Hrothgar +3~
+SAY DESC ~This axe was wielded by the hero Hrothgar, who was lost to the avalanche which slew most of the expedition on the way to Kuldahar. Though its enchantments are meager, its weathered appearance belies a long history of battles and adventures, and its edge is no less sharp than it has ever been.
+
+After receiving some dedicated care from the smith Tiernon, the axe is as good as new, ready to be wielded against the evil which was responsible for claiming its former owner's life.
+
+STATISTICS:
+
+Equipped abilities:
+– Heroic Inspiration: When the wielder's maximum hit points falls below 50%, all allies (except the wielder) within visual range gain an additional +1 bonus to hit, damage and saving throws.
+
+Combat abilities:
+– Keen: +10% bonus to Critical Hit Chance
+
+THAC0: +3
+Damage: 1d8+4 (slashing)
+Speed Factor: 4
+Proficiency Type: Axe
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 5~
+
 COPY_EXISTING ~C0FF-DT1.itm~ ~override~
 SAY NAME2 ~Fury of the Four Elements +3~
 SAY DESC ~This dart was crafted by the vremyonni, the male wizards of Rashemen. Rashemen is a land full of ancient and wise spirits bearing powerful magicks, four of which that embody the power of the seasons bestowed their power upon this magical dart, giving it an equal amount of power from four different elemental forces. The magic that empowers the dart also seems to be alive, allowing it to bond with its wielder and return to them when thrown, drawing some power from the struck target along with it.
@@ -46,3 +100,31 @@ COPY_EXISTING ~AR9711.are~ ~override~
       STR_VAR
         item_to_add = ~C0FF-MI1~
       END
+
+COPY_EXISTING ~C0FF-MS1.itm~ ~override~
+SAY NAME2 ~Joril's Dagger~
+SAY DESC ~Joril's magical dagger is large enough to match a two-handed sword for a regular man. With some reforging, it could work as an effective weapon.
+
+STATISTICS:
+
+Weight: 10~
+
+COPY_EXISTING ~C0FF-2H1.itm~ ~override~
+SAY NAME2 ~Joril's Dagger +3~
+SAY DESC ~Joril was a powerful frost giant that lived with his clan in the Spine of the World. His magic dagger was lost when he was killed by a band of adventurers. Eventually the dagger wound up in the town of Kuldahar where it was reforged so that it could be used as a two-handed sword.
+
+STATISTICS:
+
+Combat abilities:
+– 25% chance of each hit confusing the target for 3 rounds (Save vs. Spell to negate)
+
+THAC0: +3
+Damage: 1d10+3, +1 cold damage
+Damage type: Slashing
+Speed Factor: 7
+Proficiency Type: Two-handed Sword
+Type: Two-handed
+Requires:
+ 13 Strength
+
+Weight: 10~

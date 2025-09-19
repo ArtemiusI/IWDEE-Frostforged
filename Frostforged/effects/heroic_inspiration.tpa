@@ -1,0 +1,39 @@
+ACTION_IF NOT FILE_EXISTS_IN_GAME ~C0CAV02.SPL~ BEGIN
+
+COPY ~%MOD_FOLDER%/effects/heroic_inspiration~ ~override~
+
+DEFINE_ACTION_FUNCTION cd_new_portrait_icon
+  INT_VAR string = 0
+  STR_VAR bam_file = "****"
+  RET     icon
+  BEGIN
+
+  COPY_EXISTING ~statdesc.2da~ ~override~
+    COUNT_2DA_ROWS 3 count
+    READ_2DA_ENTRY (count - 1) 0 3 icon
+    SET icon += 1
+
+  APPEND ~statdesc.2da~ ~%icon% %string% %bam_file%~ UNLESS ~%bam_file%~
+
+END
+
+LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Heroic Inspiration~) STR_VAR bam_file = c0cav02i RET c0cav02i = icon END
+
+COPY_EXISTING ~C0CAV02A.spl~ ~override~
+  LPF ALTER_EFFECT
+    INT_VAR
+      match_opcode = 139
+	  parameter1 = RESOLVE_STR_REF (~Heroic Inspiration: +1 to THAC0, Damage and Saving Throws to all allies~)
+END
+  LPF ALTER_EFFECT
+    INT_VAR
+      match_opcode = 267
+	  parameter1 = RESOLVE_STR_REF (~Heroic Inspiration: +1 to THAC0, Damage and Saving Throws to all allies~)
+END
+  LPF ALTER_EFFECT
+    INT_VAR
+      match_opcode = 142
+	  parameter2 = c0cav02i
+END
+
+END

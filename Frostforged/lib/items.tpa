@@ -1,6 +1,10 @@
 COPY ~%MOD_FOLDER%/bam~ ~override~
 COPY ~%MOD_FOLDER%/itm~ ~override~
 
+INCLUDE ~%MOD_FOLDER%/effects/combat_casting.tpa~
+INCLUDE ~%MOD_FOLDER%/effects/freeze.tpa~
+INCLUDE ~%MOD_FOLDER%/effects/heroic_inspiration.tpa~
+
 // Writes a new item type into the itemtype.2da and returns the reference value.
 LAF ADD_ITEMTYPE_IN_2DA
 		INT_VAR
@@ -13,21 +17,6 @@ LAF ADD_ITEMTYPE_IN_2DA
 END
 
 EXTEND_TOP ~baldur.bcs~ ~%MOD_FOLDER%/scripts/items.baf~
-
-DEFINE_ACTION_FUNCTION cd_new_portrait_icon
-  INT_VAR string = 0
-  STR_VAR bam_file = "****"
-  RET     icon
-  BEGIN
-
-  COPY_EXISTING ~statdesc.2da~ ~override~
-    COUNT_2DA_ROWS 3 count
-    READ_2DA_ENTRY (count - 1) 0 3 icon
-    SET icon += 1
-
-  APPEND ~statdesc.2da~ ~%icon% %string% %bam_file%~ UNLESS ~%bam_file%~
-
-END
 
 // CURRENT HP CHECK
 APPEND ~splprot.2da~ ~C0CURHP 0 -1 0~ UNLESS ~C0CURHP~
@@ -109,7 +98,7 @@ SAY DESC ~This crude talisman appears to be nothing more than a flat piece of st
 STATISTICS:
 
 Equipped abilities:
-– Warlord's Undying Will: Wearer gains a +1 bonus to Constitution and Charisma
+– Warlord's Undying Will: Wearer gains a +2 bonus to Constitution and all Saving Throws.
 – Cold Resistance: +25%
 
 Weight: 1~
@@ -378,12 +367,9 @@ STATISTICS:
 
 Equipped abilities:
 – Protection from Normal Weapons
-– Combat Casting: When within 5-ft. of an enemy, the wearer's Casting Speed is increased by 3
+– Combat Casting: When within 5-ft. of an enemy, the wearer's Casting Speed is increased by 2
 
 Weight: 5~
-LAF cd_new_portrait_icon INT_VAR string = RESOLVE_STR_REF(~Combat Casting~) STR_VAR bam_file = c0ek1ic RET c0ek1ic = icon END
-COPY_EXISTING ~NAMJI1.SPL~ ~OVERRIDE~
-LPF ALTER_EFFECT INT_VAR match_opcode = 142 parameter2 = c0ek1ic END
 
 COPY_EXISTING ~OGI.ITM~ ~OVERRIDE~
 SAY DESC ~This robe was fashioned from strong fabric and dyed dark blue, the favorite color of its proud owner, the archmage Ogi-Luc. A Sembian by birth, Ogi-Luc was a powerful man, as strong in body as he was in mind. However, Ogi-Luc wasn't content to merely be strong. He wanted to be exceptionally strong. When he put on these robes, proud men stood aside and braggarts stilled their tongues. For all of Ogi-Luc's pride and prowess, he was unable to defeat the Red Wizard abjurer Nesk Vhaltim. Nesk took the robes as a prize. They were later stolen and sold by a daring rogue.
@@ -784,6 +770,19 @@ Charge abilities (once per day each):
 Weight: 4~
 
 // GLOVES
+
+COPY_EXISTING ~GAUNTEM.ITM~ ~OVERRIDE~
+SAY DESC ~These slender steel gauntlets were crafted by the elven smith Idrial Ashleaf and enchanted by his brother, Beldan. The pair gave the gauntlets to their cousin, Galain, when he alone returned from a failed quest to destroy a venerable green dragon in the forests of what are now known as Amn. The three elves made a pact to avenge their kin in ten years time. The subsequent adventures of the trio were immortalized in Merador of Waterdeep's epic "Three Avengers" ballads. The songs, sixteen in number, tell all of the adventures that the group went on. From "The Ballad of the Goblin King" to "The Ballad of Green Night," every deed is retold. Unfortunately, the history of Galain's gauntlets end with the final bars of "Green Night." The rest is shrouded in mystery.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: +1
+– Saving Throws: +1
+– Strength: +2 (+100 exceptional)
+– Racial Affinity: Elves gain an additional +1 bonus to Strength and Armor Class while wearing these gauntlets.
+
+Weight: 2~
 
 COPY_EXISTING ~OHBRAC01.ITM~ ~OVERRIDE~
 SAY DESC ~Lin Mei was described as a woman of exquisite beauty and a hellish temper. When her family urged her to find a husband, she issued a challenge to the men of the land: Whoever could make her yield in single combat could have her hand. The suitors gathered from all across Kara-Tur to test their skill, and although she fought with no weapons but her open hands, she bested every single one of them. Disappointed, all suitors left but one—a young man with kind eyes and a pair of gilded bracers, which he presented to her as a gift. "No one can hope to tame your passions," he said, "and those who would try will never understand your heart. May these trinkets serve as a reminder that your temper is your own and not to be controlled." Lin Mei did not marry that man, but she left home with him that day to seek adventure, and together they spent the rest of their lives in closer partnership than any husband and wife. Eventually the pair retired, and Lin Mei quietly disappeared from the annals of history. All that remains of her story are the bracers she wore, still burning with the fire of her untamed passion.
@@ -1257,6 +1256,31 @@ Weight: 4~
 
 // WEAPONS
 
+COPY_EXISTING ~AMAUNAT.ITM~ ~OVERRIDE~
+SAY DESC ~This shiny brass sword is extremely old, dating back at least three thousand years before Dale Reckoning. It was created by a Netherese archmage named Pouldinus as a gift to a warrior friend. This friend, Kalamnin, was a strict devotee of Amaunator, a harsh, unforgiving god now almost forgotten by sages. Amaunator was the god of law and the god of the sun. He required his servants to follow his edicts exactly. Kalamnin did his best to observe Amaunator's laws in his travels. The blade was lost when Kalamnin was killed in battle by dozens of nycadaemons. The sorcerer who summoned the creatures, Ylmandi, kept the blade in his family until the fall of Netheril.
+
+STATISTICS:
+
+Combat abilities:
+– Additional 2d4+3 magic fire damage vs. undead
+– Upon slaying an undead creature with this weapon, the slain undead bursts into flames, dealing 4d4+8 magic fire damage to enemies in a 10-ft. radius around them.
+
+Charge abilities:
+– Sunray once per day
+  Blindness for 2 rounds (Save vs. Spell negates); undead and myconids take 8d6 fire damage (Save vs. Spell for half)
+  Range: 100 ft.
+  Area of Effect: 8-ft. radius 
+
+THAC0: +3
+Damage: 2d4+3 (slashing)
+Speed Factor: 1
+Proficiency Type: Bastard Sword
+Type: One-handed
+Requires:
+ 11 Strength
+
+Weight: 3~
+
 COPY_EXISTING ~APPLEBN.ITM~ ~OVERRIDE~
 SAY DESC ~A small steel dagger with a shadowtop handle, Applebane was once owned by the halfling thief Peliwen Redgrass. Peliwen was a kind but morose individual who spent most of his time sitting in a large rocking chair that he took with him on adventures. Before important adventures, he would just sit in his rocking chair and eat apples with the aid of his dagger. Peliwen's blade was so rarely used for combat that his comrades started calling it "Applebane."
 
@@ -1429,6 +1453,29 @@ Proficiency Type: Longbow
 Type: Two-handed
 Requires:
  12 Strength
+
+Weight: 3~
+
+COPY_EXISTING ~BLOODGF.ITM~ ~OVERRIDE~
+SAY DESC ~This weapon was fashioned by your hands, guided by the dwarf Tiernon. Forged from ice taken from the walls of the Gloomfrost, this hammer has taken some of the glacier and some of your strength into it, creating a formidable weapon. Though made of ice, the weapon is only slightly cold to the touch and does not melt, even when exposed to the hottest flames.
+
+STATISTICS:
+
+Equipped abilities:
+– Fire Resistance: +25%
+– Fire Shield (Blue)
+
+Combat abilities:
+– Winter's Fortitude: The wielder's Cold Resistance is set to 125% and cannot be reduced by any means. The wielder is healed for two hit points each time they take damage.
+
+THAC0: +4
+Damage: 1d4+5
+Damage type: crushing
+Speed Factor: 1
+Proficiency Type: War Hammer
+Type: One-handed
+Requires:
+ 9 Strength
 
 Weight: 3~
 
@@ -1745,6 +1792,32 @@ Requires:
 
 Weight: 3~
 
+COPY_EXISTING ~FANGGF.ITM~ ~OVERRIDE~
+SAY DESC ~This weapon was fashioned by your hands, guided by the dwarf Tiernon. Forged from ice taken from the walls of the Gloomfrost, this blade has taken some of the glacier and some of your strength into it, creating a formidable weapon. Though made of ice, the weapon is only slightly cold to the touch and does not melt, even when exposed to the hottest flames.
+
+STATISTICS:
+
+Equipped abilities:
+– Fire Resistance: +25%
+– Magic Resistance: +10%
+– Fire Shield (Blue)
+
+Charge abilities:
+– Spell Trap once per rest
+  Absorbs up to 30 levels of spells, restoring the wielder's own
+  Duration: 18 rounds
+
+THAC0: +4
+Damage: 1d4+4, 4 magic cold
+Damage type: piercing
+Speed Factor: 1
+Proficiency Type: Dagger
+Type: One-handed
+Requires:
+ 3 Strength
+
+Weight: 1~
+
 COPY_EXISTING ~FKILLER.ITM~ ~OVERRIDE~
 SAY DESC ~This deceptively mundane-looking battle axe has a short but strange history. According to philosophers of magic, Faith Killer was enchanted by the non-belief of its owner, the warrior Erion the Skeptic. A rarity in Faerûn, Erion was a man who denied the existence of holy magic and the gods themselves. He was known for his attempts to prove that priests were charlatans and holy magic was, in actuality, a different form of standard magic. Sages believe that Erion's intense opposition to holy men and women actually generated sympathetic magical powers in his weapon. Priests of Selûne in Westgate confiscated the axe when they killed Erion in self-defense. It is currently believed that Erion is one of the unbelievers used as a building block in Myrkul's Bone Castle.
 
@@ -1805,6 +1878,36 @@ Requires:
 
 Weight: 1~
 
+ADD_PROJECTILE ~%MOD_FOLDER%/ITM/FISTGF2.PRO~
+
+COPY_EXISTING ~FISTGF.ITM~ ~OVERRIDE~
+SAY DESC ~This weapon was fashioned by your hands, guided by the dwarf Tiernon. Forged from ice taken from the walls of the Gloomfrost, this mace has taken some of the glacier and some of your strength into it, creating a formidable weapon. Though made of ice, the weapon is only slightly cold to the touch and does not melt, even when exposed to the hottest flames.
+
+STATISTICS:
+
+Equipped abilities:
+– Fire Resistance: +25%
+– Fire Shield (Blue)
+
+Combat abilities:
+– Splinters: On each attack, the target must make a Saving Throw vs. Breath at -2 or be impaled with shards of unstable ice, becoming Slowed and suffering 1d4+1 initial magic cold damage and subsequently one point of piercing damage each round for 4 rounds. If a target is slain with this weapon, an icy explosion bursts from them, afflicting all nearby enemies with Splinters with no Saving Throw.
+
+THAC0: +4
+Damage: 1d6+5 (crushing)
+Speed Factor: 3
+Proficiency Type: Mace
+Type: One-handed
+Requires:
+ 10 Strength
+
+Weight: 2~
+
+COPY_EXISTING ~FISTGF2.SPL~ ~OVERRIDE~
+  LPF ALTER_SPELL_HEADER
+    INT_VAR
+	  projectile = FISTGF2
+  END
+
 COPY_EXISTING ~GIVING.ITM~ ~OVERRIDE~
 SAY DESC ~This black and silver morning star was created by a Cormyrean necromancer called Dameth the Wan. Although it appears to be a sinister weapon, the unadorned surfaces of the morning star mask its dreadful power. The weapon was sold to a priest of Myrkul who put it to good use in his battles against adventurers. Eventually, however, the priest was overcome by a paladin of Lathander, who confiscated the item. When the mountain temple where the morning star was contained was sacked by giants in 1190 DR, the history of the weapon ended.
 
@@ -1838,6 +1941,33 @@ Requires:
  9 Strength
 
 Weight: 5~
+
+COPY_EXISTING ~HANDGF.ITM~ ~OVERRIDE~
+SAY DESC ~This weapon was fashioned by your hands, guided by the dwarf Tiernon. Forged from ice taken from the walls of the Gloomfrost, this blade has taken some of the glacier and some of your strength into it, creating a formidable weapon. Though made of ice, the weapon is only slightly cold to the touch and does not melt, even when exposed to the hottest flames.
+
+STATISTICS:
+
+Equipped abilities:
+– Fire Resistance: +25%
+– Fire Shield (Blue)
+
+Combat abilities:
+– Keen: +10% bonus to Critical Hit Chance
+– Winter's Breath: On a critical hit, the target is Suffocated, suffering a -4 penalty to THAC0, Dexterity and Casting Speed, as well as halving their movement speed and attacks per round for 1 round. If the target is affected by Winter's Breath a second time while already Suffocated, they become Frozen. While Frozen, the target suffers double damage from physical and fire damage but is immune to cold damage. After five rounds have passed or upon taking damage, the target will be Shattered, losing 15% of their maximum hit points, becoming unfrozen but suffering a -25% penalty to physical resistances and halved Strength for one turn.
+
+THAC0: +4
+Damage: 1d10+4, 4 magic cold
+Damage type: slashing
+Speed Factor: 6
+Proficiency Type: Two-handed Sword
+Type: Two-handed
+Requires:
+ 14 Strength
+
+Weight: 10~
+
+COPY_EXISTING ~HANDGF.SPL~ ~OVERRIDE~
+SAY NAME1 ~Winter's Breath~
 
 COPY_EXISTING ~HELLPIK.ITM~ ~OVERRIDE~
 SAY DESC ~A sturdy hammer with a good deal of battlefield experience, Hellpick was used by the dwarven warrior Durlow Ironbar. Durlow's hammer, like many dwarven weapons, was forged and blessed with power by priests of Moradin. It earned its name in Durlow's service, where he used it to drive back drow wizards and their summoned abyssal allies. Legends say that Durlow even defeated one of the dreaded Yochlol, the "Handmaidens of Lolth." Durlow met his end when the drow employed treachery to defeat him. Under magical disguise, drow assassins visited Durlow's fortified city as human ambassadors from Tethyr. They then poisoned Durlow's food, which he ate in front of them. Durlow eventually realized what was happening and managed to stumble to his room and grab Hellpick. In the resulting battle, Durlow managed to kill four of the five assassins before he fell victim to the effects of the poison. The fifth assassin is believed to have escaped.
@@ -1966,6 +2096,30 @@ Proficiency Type: Longbow
 Type: Two-handed
 Requires:
  15 Strength
+
+Weight: 3~
+
+COPY_EXISTING ~KISSGF.ITM~ ~OVERRIDE~
+SAY DESC ~This weapon was fashioned by your hands, guided by the dwarf Tiernon. Forged from ice taken from the walls of the Gloomfrost, this blade has taken some of the glacier and some of your strength into it, creating a formidable weapon. Though made of ice, the weapon is only slightly cold to the touch and does not melt, even when exposed to the hottest flames.
+
+STATISTICS:
+
+Equipped abilities:
+– Fire Resistance: +25%
+– Fire Shield (Blue)
+
+Combat abilities:
+– The wielder is healed for the same amount as any cold damage dealt by this weapon
+– Winter's Kiss: Each hit with this weapon has a 25% chance of freezing the target. While Frozen, the target suffers double damage from physical and fire damage but is immune to cold damage. After five rounds have passed or upon taking damage, the target will be Shattered, losing 15% of their maximum hit points, becoming unfrozen but suffering a -25% penalty to physical resistances and halved Strength for one turn.
+
+THAC0: +4
+Damage: 1d8+4, +4 magic cold
+Damage type: slashing
+Speed Factor: 1
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
 
 Weight: 3~
 
@@ -2491,7 +2645,7 @@ SAY DESC ~A massive club, this weapon used to belong to the powerful barbarian w
 
 STATISTICS:
 
-Equipped abilities:
+Combat abilities:
 – Fortitude: The wielder is healed for one hit point each time they take damage.
 
 THAC0: +5
@@ -2542,6 +2696,28 @@ Requires:
 
 Weight: 4~
 
+COPY_EXISTING ~TALONGF.ITM~ ~OVERRIDE~
+SAY DESC ~This weapon was fashioned by your hands, guided by the dwarf Tiernon. Forged from ice taken from the walls of the Gloomfrost, this blade has taken some of the glacier and some of your strength into it, creating a formidable weapon. Though made of ice, the weapon is only slightly cold to the touch and does not melt, even when exposed to the hottest flames.
+
+STATISTICS:
+
+Equipped abilities:
+– Fire Resistance: +25%
+– Fire Shield (Blue)
+
+Combat abilities:
+– Winter's Grasp: This weapon has a significantly longer range than an ordinary scimitar. Each attack deals an additional 2d6 magic cold damage and pulls the attacked target towards the wielder, stunning them for one round on a failed Saving Throw vs. Death.
+
+THAC0: +4
+Damage: 1d8+4 (slashing)
+Speed Factor: 1
+Proficiency Type: Scimitar/Wakizashi/Ninjatō
+Type: One-handed
+Requires:
+ 8 Strength
+
+Weight: 3~
+
 COPY_EXISTING ~TOMB.ITM~ ~OVERRIDE~
 SAY DESC ~The quick-witted warrior Seldon Mirai was known for his cool demeanor and his lighthearted comments in the midst of trying circumstances. He was especially well known for his lack of fear of the undead. He considered undead to be, in his words, "unoriginal, tired old jokes." "After the hundredth skeleton," he would say, "what's to be afraid of? They all march at you like horses to water, and you just hack them down one at a time. I'm supposed to be scared of that?" He would wade into tombs with his trusted flail and smash apart any undead that he found, joking all the way. Eventually, Seldon's lack of respect for the necromantic arts earned him an enemy in the form of Tiron, a lich of no small power. Tiron captured Seldon and paralyzed him, letting a group of skeletons beat him to death. Seldon's friends later recovered his body and had him raised from the dead. He was not as lighthearted about the walking dead after that.
 
@@ -2560,6 +2736,29 @@ Requires:
  13 Strength
 
 Weight: 5~
+
+COPY_EXISTING ~TONGGF.ITM~ ~OVERRIDE~
+SAY DESC ~This weapon was fashioned by your hands, guided by the dwarf Tiernon. Forged from ice taken from the walls of the Gloomfrost, this blade has taken some of the glacier and some of your strength into it, creating a formidable weapon. Though made of ice, the weapon is only slightly cold to the touch and does not melt, even when exposed to the hottest flames.
+
+STATISTICS:
+
+Equipped abilities:
+– Fire Resistance: +25%
+– Fire Shield (Blue)
+
+Combat abilities:
+– Winter's Howl: On a critical hit, a cone of freezing wind erupts from the halberd, knocking all targets struck by it away from the wielder, dealing 3d6 magic cold damage, and slowing them for 1 round. Each target also has a 25% chance to become Frozen. While Frozen, the target suffers double damage from physical and fire damage but is immune to cold damage. After five rounds have passed or upon taking damage, the target will be Shattered, losing 15% of their maximum hit points, becoming unfrozen but suffering a -25% penalty to physical resistances and halved Strength for one turn.
+
+THAC0: +4
+Damage: 1d10+4, 4 magic cold
+Damage type: slashing or piercing, whichever is better
+Speed Factor: 5
+Proficiency Type: Halberd
+Type: Two-handed
+Requires:
+ 13 Strength
+
+Weight: 6~
 
 COPY_EXISTING ~TONGUE.ITM~ ~OVERRIDE~
 SAY DESC ~A wicked-looking dagger with a dark history, the Salamander's Tongue is prized both for its use as a weapon and its hidden magical powers. The blade appears to be an exotic-looking dagger with a kris-like wavy blade ending in two small points. A small portion of a slimy, bright-red living salamander's tongue is somehow embedded in the heart of the blade, near the grip. It pulses and writhes randomly without intervention from the owner. 

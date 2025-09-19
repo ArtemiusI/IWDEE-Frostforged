@@ -1,0 +1,10 @@
+
+IF
+    NumTimesTalkedToGT(0)
+    LOS([PC],20)
+THEN
+    RESPONSE #100
+        SetGlobal("C0FrostforgedHrothAxe","GLOBAL",1)
+        Wait(2)
+        StartDialogueNoSet(PartySlot1)
+END

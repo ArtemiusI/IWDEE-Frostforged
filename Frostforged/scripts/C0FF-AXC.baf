@@ -1,0 +1,33 @@
+IF
+    True()
+THEN
+    RESPONSE #100
+        CutSceneId(Myself)
+        StartCutSceneMode()
+        ClearActions(Player1)
+        ClearActions(Player2)
+        ClearActions(Player3)
+        ClearActions(Player4)
+        ClearActions(Player5)
+        ClearActions(Player6)
+        MultiPlayerSync()
+        SmallWait(8)
+        TakePartyItem("C0FF-AX1")  // Sundered Shield of Tiernon +1
+        MultiPlayerSync()
+        DestroyItem("C0FF-AX1")  // Sundered Shield of Tiernon +1
+        MoveToPoint([3426.452])
+        FadeToColor([15.0],0)
+        Face(N)
+        Wait(2)
+        FadeFromColor([15.0],0)
+        MoveToPoint([3284.614])
+        Face(NW)
+        SmallWait(8)
+        DestroyItem("C0FF-AX1")  // Sundered Shield of Tiernon +1
+        GiveItemCreate("C0FF-AX2",LastTalkedToBy(Myself),1,1,1)  // Sundered Shield of Tiernon +2
+        SetGlobal("C0TiernonHrothgarsAxeUpgrade","GLOBAL",1)
+        MultiPlayerSync()
+        EndCutSceneMode()
+        Dialogue(LastTalkedToBy(Myself))
+END
+
