@@ -128,3 +128,6 @@ Requires:
  13 Strength
 
 Weight: 10~
+
+COPY_EXISTING ~JORIL.CRE~ ~OVERRIDE~
+  ADD_CRE_ITEM ~C0FF-MS1~ #1 #1 #1 ~IDENTIFIED~ ~inv~
