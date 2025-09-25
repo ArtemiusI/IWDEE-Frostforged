@@ -1,5 +1,6 @@
 
 IF
+    Global("C0FrostforgedHrothAxe","GLOBAL",0)
     NumTimesTalkedToGT(0)
     LOS([PC],20)
 THEN
